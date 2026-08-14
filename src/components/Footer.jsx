@@ -1,31 +1,33 @@
+import { Link } from "react-router-dom";
 import Logo from "./Logo";
+import Icon from "./Icon";
 
 const sections = [
   {
     title: "Partido",
     links: [
-      { label: "Sobre Nosotros", href: "#sobre-nosotros" },
-      { label: "Liderazgo", href: "#miembros" },
-      { label: "Ministerios", href: "#ministerios" },
-      { label: "Noticias", href: "#noticias" },
+      { label: "Sobre Nosotros", to: "/sobre-nosotros" },
+      { label: "Liderazgo", to: "/miembros" },
+      { label: "Ministerios", to: "/ministerios" },
+      { label: "Noticias", to: "/noticias" },
     ],
   },
   {
     title: "Propuestas",
     links: [
-      { label: "Educación 2030", href: "#planes" },
-      { label: "Salud Universal", href: "#planes" },
-      { label: "Empleo Digno", href: "#planes" },
-      { label: "País Verde", href: "#planes" },
+      { label: "Educación 2030", to: "/planes/educacion-2030" },
+      { label: "Salud Universal", to: "/planes/salud-universal" },
+      { label: "Empleo Digno", to: "/planes/empleo-y-emprendimiento" },
+      { label: "País Verde", to: "/planes/pais-verde" },
     ],
   },
   {
     title: "Contacto",
     links: [
-      { label: "Inscripción", href: "#contacto" },
-      { label: "Prensa", href: "#contacto" },
-      { label: " Voluntariado", href: "#contacto" },
-      { label: "Donaciones", href: "#contacto" },
+      { label: "Inscripción", to: "/contacto" },
+      { label: "Prensa", to: "/contacto" },
+      { label: "Voluntariado", to: "/contacto" },
+      { label: "Donaciones", to: "/contacto" },
     ],
   },
 ];
@@ -37,7 +39,7 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3">
               <Logo className="h-14 w-14" />
               <div>
                 <p className="font-display text-base font-extrabold uppercase tracking-wider">
@@ -47,7 +49,7 @@ export default function Footer() {
                   por el Cambio
                 </p>
               </div>
-            </div>
+            </Link>
             <p className="mt-4 text-sm leading-relaxed text-navy-200">
               Unidos hoy, transformamos mañana. Construyendo juntos la
               República Dominicana que merecemos.
@@ -75,12 +77,12 @@ export default function Footer() {
               <ul className="mt-4 space-y-2">
                 {s.links.map((l) => (
                   <li key={l.label}>
-                    <a
-                      href={l.href}
+                    <Link
+                      to={l.to}
                       className="text-sm text-navy-200 transition-colors hover:text-white"
                     >
                       {l.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -94,13 +96,11 @@ export default function Footer() {
             reservados.
           </p>
           <p className="text-xs text-navy-300">
-            Hecho con <span className="text-gold-400">❤</span> en República
-            Dominicana
+            Hecho con compromiso en República Dominicana
           </p>
         </div>
       </div>
 
-      {/* Gold accent bar */}
       <div className="h-1 bg-gradient-to-r from-navy-600 via-gold-500 to-navy-600" />
     </footer>
   );

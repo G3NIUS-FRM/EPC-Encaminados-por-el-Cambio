@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { news } from "../data/news";
 
 export default function News() {
@@ -5,10 +6,7 @@ export default function News() {
   const rest = news.slice(1);
 
   return (
-    <section
-      id="noticias"
-      className="relative bg-navy-50 py-20 sm:py-28"
-    >
+    <section id="noticias" className="relative bg-navy-50 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
           <div>
@@ -20,8 +18,8 @@ export default function News() {
             </h2>
             <div className="gold-divider mt-4 !ml-0" />
           </div>
-          <a
-            href="#contacto"
+          <Link
+            to="/noticias"
             className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-navy-900 transition-colors hover:text-gold-600"
           >
             Ver todas las noticias
@@ -39,11 +37,14 @@ export default function News() {
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
-          </a>
+          </Link>
         </div>
 
-        {/* Featured news */}
-        <article className="mt-10 grid overflow-hidden rounded-3xl bg-white shadow-card transition-shadow hover:shadow-2xl lg:grid-cols-2">
+        {/* Featured */}
+        <Link
+          to={`/noticias/${featured.slug}`}
+          className="mt-10 grid overflow-hidden rounded-3xl bg-white shadow-card transition-shadow hover:shadow-2xl lg:grid-cols-2"
+        >
           <div className="relative h-64 lg:h-auto">
             <img
               src={featured.imagen}
@@ -51,7 +52,7 @@ export default function News() {
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute top-4 left-4 inline-flex items-center gap-2 rounded-full bg-gold-500 px-3 py-1 text-xs font-bold uppercase tracking-wider text-navy-900">
-              ⭐ Destacado
+              Destacado
             </div>
           </div>
           <div className="flex flex-col justify-center p-6 sm:p-10">
@@ -67,10 +68,7 @@ export default function News() {
             <p className="mt-4 text-sm leading-relaxed text-navy-700 sm:text-base">
               {featured.resumen}
             </p>
-            <a
-              href="#contacto"
-              className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-navy-900 px-5 py-2.5 text-sm font-bold uppercase tracking-wider text-white transition-colors hover:bg-gold-500 hover:text-navy-900"
-            >
+            <span className="mt-6 inline-flex w-fit items-center gap-2 rounded-full bg-navy-900 px-5 py-2.5 text-sm font-bold uppercase tracking-wider text-white">
               Leer más
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -86,15 +84,16 @@ export default function News() {
                   d="M9 5l7 7-7 7"
                 />
               </svg>
-            </a>
+            </span>
           </div>
-        </article>
+        </Link>
 
         {/* News grid */}
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {rest.map((n) => (
-            <article
+            <Link
               key={n.id}
+              to={`/noticias/${n.slug}`}
               className="group card-base overflow-hidden"
             >
               <div className="relative h-44 overflow-hidden">
@@ -115,14 +114,11 @@ export default function News() {
                 <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-navy-700">
                   {n.resumen}
                 </p>
-                <a
-                  href="#contacto"
-                  className="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-gold-600 transition-colors hover:text-navy-900"
-                >
-                  Leer más →
-                </a>
+                <span className="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-gold-600 transition-colors group-hover:text-navy-900">
+                  Leer artículo completo →
+                </span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

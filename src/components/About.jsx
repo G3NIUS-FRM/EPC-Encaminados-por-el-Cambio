@@ -1,3 +1,5 @@
+import Icon from "./Icon";
+
 export default function About() {
   return (
     <section
@@ -88,16 +90,18 @@ export default function About() {
             {/* Values */}
             <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
               {[
-                { t: "Unidad", i: "🤝" },
-                { t: "Transparencia", i: "🔍" },
-                { t: "Participación", i: "🗳️" },
-                { t: "Compromiso", i: "⭐" },
+                { t: "Unidad", i: "users" },
+                { t: "Transparencia", i: "sparkles" },
+                { t: "Participación", i: "megaphone" },
+                { t: "Compromiso", i: "shield" },
               ].map((v) => (
                 <div
                   key={v.t}
                   className="rounded-xl border-2 border-navy-100 bg-navy-50/50 p-4 text-center transition-colors hover:border-gold-400"
                 >
-                  <p className="text-2xl">{v.i}</p>
+                  <div className="mx-auto flex h-10 w-10 items-center justify-center text-gold-600">
+                    <Icon name={v.i} className="h-8 w-8" strokeWidth={1.5} />
+                  </div>
                   <p className="mt-1 text-xs font-bold uppercase tracking-wider text-navy-900">
                     {v.t}
                   </p>

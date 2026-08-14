@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import Logo from "./Logo";
+import Icon from "./Icon";
 
 export default function Hero() {
   return (
@@ -28,7 +30,7 @@ export default function Hero() {
           <div className="flex flex-col items-center gap-1">
             <span className="inline-flex items-center gap-2 rounded-full border border-gold-500/40 bg-gold-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-gold-400">
               <span className="h-2 w-2 animate-pulse rounded-full bg-gold-400" />
-              Partido Político • 2026
+              Partido Político · República Dominicana · 2026
             </span>
           </div>
         </div>
@@ -61,38 +63,25 @@ export default function Hero() {
           className="mt-10 flex flex-col items-center gap-4 sm:flex-row animate-fade-up"
           style={{ animationDelay: "0.4s" }}
         >
-          <a href="#sobre-nosotros" className="btn-primary">
+          <Link to="/sobre-nosotros" className="btn-primary">
             Conoce Nuestra Historia
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={3}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </a>
-          <a href="#planes" className="btn-outline">
-            Nuestros Planes
-          </a>
+            <Icon name="arrowRight" className="h-4 w-4" strokeWidth={3} />
+          </Link>
+          <Link to="/planes" className="btn-outline">
+            Ver Planes de Gobierno
+          </Link>
         </div>
 
-        {/* Stats */}
+        {/* Quick stats */}
         <div
           className="mt-16 grid w-full max-w-4xl grid-cols-2 gap-4 sm:grid-cols-4 animate-fade-up"
           style={{ animationDelay: "0.5s" }}
         >
           {[
             { n: "13", l: "Ministerios" },
-            { n: "50+", l: "Provincias" },
-            { n: "100%", l: "Compromiso" },
-            { n: "1M+", l: "Dominicanos" },
+            { n: "7", l: "Planes Estratégicos" },
+            { n: "31", l: "Provincias" },
+            { n: "2026", l: "El Año del Cambio" },
           ].map((s) => (
             <div
               key={s.l}

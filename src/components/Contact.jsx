@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -210,7 +211,7 @@ export default function Contact() {
               type="submit"
               className="w-full rounded-full bg-gold-500 px-6 py-3.5 font-bold uppercase tracking-wider text-navy-900 transition-all hover:bg-gold-400 hover:shadow-gold-glow"
             >
-              {submitted ? "✓ ¡Gracias por unirte!" : "Enviar inscripción"}
+              {submitted ? "Mensaje enviado correctamente" : "Enviar inscripción"}
             </button>
           </div>
         </form>
