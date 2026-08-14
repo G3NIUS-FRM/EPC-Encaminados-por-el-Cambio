@@ -1,40 +1,25 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { ministries } from "../data/ministries";
-import Icon from "./Icon";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ministries } from '../data/ministries';
+import Icon from './Icon';
 
 export default function Ministries() {
-  const [filter, setFilter] = useState("Todos");
+  const [filter, setFilter] = useState('Todos');
 
   const filtered =
-    filter === "Todos"
+    filter === 'Todos'
       ? ministries
       : ministries.filter((m) => m.nombre.includes(filter));
 
   return (
     <section id="ministerios" className="relative bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-        <div className="text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.3em] text-gold-600">
-            Nuestros Ministerios
-          </p>
-          <h2 className="mt-3 font-display text-3xl font-black uppercase leading-tight text-navy-900 sm:text-4xl lg:text-5xl">
-            Equipo de Gobierno
-          </h2>
-          <div className="gold-divider mt-4" />
-          <p className="mx-auto mt-4 max-w-2xl text-base text-navy-700">
-            Cada ministerio está liderado por profesionales con experiencia,
-            preparados para servir a la República Dominicana.
-          </p>
-        </div>
-
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((m) => (
             <Link
               to={`/ministerios/${m.slug}`}
               key={m.id}
-              className="group card-base flex flex-col overflow-hidden"
-            >
+              className="group card-base flex flex-col overflow-hidden">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={m.imagen}
@@ -67,8 +52,7 @@ export default function Ministries() {
                     className="h-3 w-3 transition-transform group-hover:translate-x-1"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
+                    stroke="currentColor">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"

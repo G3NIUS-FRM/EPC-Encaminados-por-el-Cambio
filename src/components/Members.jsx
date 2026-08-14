@@ -1,32 +1,17 @@
-import { Link } from "react-router-dom";
-import { leadership } from "../data/leadership";
-import { ministries } from "../data/ministries";
-import Icon from "./Icon";
+import { Link } from 'react-router-dom';
+import { leadership } from '../data/leadership';
+import { ministries } from '../data/ministries';
+import Icon from './Icon';
 
 export default function Members() {
-  const presidente = leadership.find((l) => l.id === "presidente");
-  const vicepresidenta = leadership.find((l) => l.id === "vicepresidenta");
+  const presidente = leadership.find((l) => l.id === 'presidente');
+  const vicepresidenta = leadership.find((l) => l.id === 'vicepresidenta');
 
   return (
     <section
       id="miembros"
-      className="relative bg-gradient-to-b from-navy-50 to-white py-20 sm:py-28"
-    >
+      className="relative bg-gradient-to-b from-navy-50 to-white py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-        <div className="text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.3em] text-gold-600">
-            Nuestro Equipo
-          </p>
-          <h2 className="mt-3 font-display text-3xl font-black uppercase leading-tight text-navy-900 sm:text-4xl lg:text-5xl">
-            Liderazgo del Partido
-          </h2>
-          <div className="gold-divider mt-4" />
-          <p className="mx-auto mt-4 max-w-2xl text-base text-navy-700">
-            Mujeres y hombres comprometidos con el presente y futuro de la
-            República Dominicana.
-          </p>
-        </div>
-
         {/* President card */}
         <div className="mt-14">
           <div className="group relative overflow-hidden rounded-3xl bg-navy-900 text-white shadow-2xl">
@@ -120,8 +105,7 @@ export default function Members() {
 
             <Link
               to="/ministerios"
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-gold-500 px-5 py-2.5 text-sm font-bold text-navy-900 transition-all hover:bg-gold-400 hover:shadow-gold-glow"
-            >
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-gold-500 px-5 py-2.5 text-sm font-bold text-navy-900 transition-all hover:bg-gold-400 hover:shadow-gold-glow">
               Ver Gabinete Completo
               <Icon name="arrowRight" className="h-4 w-4" strokeWidth={3} />
             </Link>
@@ -142,8 +126,7 @@ export default function Members() {
             </div>
             <Link
               to="/ministerios"
-              className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-gold-600 transition-colors hover:text-navy-900"
-            >
+              className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-gold-600 transition-colors hover:text-navy-900">
               Ver detalles de cada ministerio
               <Icon name="arrowRight" className="h-4 w-4" strokeWidth={3} />
             </Link>
@@ -154,8 +137,7 @@ export default function Members() {
               <Link
                 key={m.id}
                 to={`/ministerios/${m.slug}`}
-                className="group flex items-center gap-4 rounded-2xl border border-navy-100 bg-white p-4 transition-all hover:border-gold-400 hover:shadow-card"
-              >
+                className="group flex items-center gap-4 rounded-2xl border border-navy-100 bg-white p-4 transition-all hover:border-gold-400 hover:shadow-card">
                 <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full ring-2 ring-gold-500/30 transition-all group-hover:ring-gold-500">
                   <img
                     src={m.imagenTitular}
@@ -164,7 +146,11 @@ export default function Members() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-900/30 via-transparent to-transparent" />
                   <div className="absolute bottom-0 right-0 flex h-6 w-6 items-center justify-center rounded-full bg-gold-500 text-navy-900 ring-2 ring-white">
-                    <Icon name={m.icono} className="h-3 w-3" strokeWidth={2.5} />
+                    <Icon
+                      name={m.icono}
+                      className="h-3 w-3"
+                      strokeWidth={2.5}
+                    />
                   </div>
                 </div>
                 <div className="min-w-0 flex-1">
