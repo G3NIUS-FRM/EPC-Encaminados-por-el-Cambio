@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans antialiased bg-white text-navy-900;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .container-px {
+    @apply px-4 sm:px-6 lg:px-10;
+  }
+
+  .section-title {
+    @apply font-display font-black uppercase tracking-tight text-navy-900;
+  }
+
+  .gold-divider {
+    @apply h-1 w-20 bg-gold-500 mx-auto rounded-full;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full bg-gold-500 px-6 py-3 font-bold text-navy-900 transition-all duration-300 hover:bg-gold-400 hover:shadow-gold-glow hover:-translate-y-0.5;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 rounded-full border-2 border-white px-6 py-3 font-bold text-white transition-all duration-300 hover:bg-white hover:text-navy-900;
+  }
+
+  .card-base {
+    @apply rounded-2xl bg-white shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #f5b700 0%, #ffd94d 50%, #f5b700 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e3a8a;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0a1a3d;
+}
+
+/* Decorative star burst pattern background */
+.star-pattern {
+  background-image: radial-gradient(circle at 25% 25%, #f5b700 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, #f5b700 1px, transparent 1px);
+  background-size: 60px 60px;
+}
