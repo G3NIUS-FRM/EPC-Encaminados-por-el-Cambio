@@ -134,7 +134,7 @@ export default function Navbar() {
           ))}
           <li className="px-1 pt-2">
             <Link
-              to="/contacto"
+              to="/"
               onClick={() => setOpen(false)}
               className="block rounded-full bg-gold-500 px-5 py-3 text-center text-sm font-bold text-navy-900">
               Únete al Cambio
