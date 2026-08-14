@@ -12,7 +12,6 @@ import NewsPage from "./pages/NewsPage";
 import NewsDetailPage from "./pages/NewsDetailPage";
 import PlansPage from "./pages/PlansPage";
 import PlanDetailPage from "./pages/PlanDetailPage";
-import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 export default function App() {
@@ -34,7 +33,6 @@ export default function App() {
           <Route path="/noticias/:slug" element={<NewsDetailPage />} />
           <Route path="/planes" element={<PlansPage />} />
           <Route path="/planes/:slug" element={<PlanDetailPage />} />
-          <Route path="/contacto" element={<ContactPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>

@@ -43,14 +43,6 @@ const sections = [
     icon: "newspaper",
     accent: "border-gold-400",
   },
-  {
-    to: "/contacto",
-    title: "Contacto",
-    description:
-      "Inscríbete, participa como voluntario o comunícate con nuestra sede nacional.",
-    icon: "mail",
-    accent: "border-navy-600",
-  },
 ];
 
 export default function HomePage() {
@@ -146,12 +138,12 @@ export default function HomePage() {
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link to="/contacto" className="btn-primary">
-              Contáctanos
+            <Link to="/sobre-nosotros" className="btn-primary">
+              Conoce nuestra historia
               <Icon name="arrowRight" className="h-4 w-4" strokeWidth={3} />
             </Link>
-            <Link to="/sobre-nosotros" className="btn-outline">
-              Conoce más
+            <Link to="/planes" className="btn-outline">
+              Ver propuestas
             </Link>
           </div>
         </div>

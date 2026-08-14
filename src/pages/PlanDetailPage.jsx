@@ -249,18 +249,18 @@ export default function PlanDetailPage() {
             Sé parte del cambio
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-navy-700">
-            Únete a las miles de personas que ya están construyendo el país que
-            merecemos.
+            Conoce cómo cada plan de gobierno se conecta con los demás ejes
+            estratégicos para transformar la República Dominicana.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Link to="/contacto" className="btn-primary">
-              Únete al Partido
+            <Link to="/planes" className="btn-primary">
+              Ver todos los planes
             </Link>
             <Link
-              to="/planes"
+              to="/ministerios"
               className="inline-flex items-center gap-2 rounded-full border-2 border-navy-900 px-6 py-3 font-bold text-navy-900 transition-all hover:bg-navy-900 hover:text-white"
             >
-              Ver otros planes
+              Ver ministerios
             </Link>
           </div>
         </div>

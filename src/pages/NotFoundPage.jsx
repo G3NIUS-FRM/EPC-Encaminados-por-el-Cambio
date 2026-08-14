@@ -24,10 +24,10 @@ export default function NotFoundPage() {
             Volver al inicio
           </Link>
           <Link
-            to="/contacto"
+            to="/sobre-nosotros"
             className="inline-flex items-center gap-2 rounded-full border-2 border-navy-900 px-6 py-3 font-bold text-navy-900 hover:bg-navy-900 hover:text-white"
           >
-            Contactarnos
+            Conoce más
           </Link>
         </div>
       </div>

@@ -9,7 +9,6 @@ const links = [
   { to: '/ministerios', label: 'Ministerios' },
   { to: '/noticias', label: 'Noticias' },
   { to: '/planes', label: 'Planes' },
-  ,
 ];
 
 export default function Navbar() {
@@ -75,9 +74,9 @@ export default function Navbar() {
         </ul>
 
         <Link
-          to="/contacto"
-          className="hidden lg:inline-flex items-center gap-2 rounded-full bg-gold-500 px-5 py-2 text-sm font-bold text-navy-900 transition-all hover:bg-gold-400 hover:shadow-gold-glow">
-          Únete al Cambio
+          to="/sobre-nosotros"
+          className="hidden lg:inline-flex items-center gap-2 rounded-full border-2 border-gold-500 px-5 py-2 text-sm font-bold text-gold-600 transition-all hover:bg-gold-500 hover:text-navy-900">
+          Conoce más
         </Link>
 
         <button
@@ -134,10 +133,10 @@ export default function Navbar() {
           ))}
           <li className="px-1 pt-2">
             <Link
-              to="/"
+              to="/sobre-nosotros"
               onClick={() => setOpen(false)}
               className="block rounded-full bg-gold-500 px-5 py-3 text-center text-sm font-bold text-navy-900">
-              Únete al Cambio
+              Conoce más
             </Link>
           </li>
         </ul>

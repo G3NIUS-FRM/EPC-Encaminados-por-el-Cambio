@@ -116,10 +116,10 @@ export default function MinistryDetailPage() {
               </div>
             </div>
             <a
-              href="#contacto"
+              href="#"
               className="mt-4 block rounded-full bg-gold-500 px-4 py-2.5 text-center text-sm font-bold text-navy-900 transition-all hover:bg-gold-400 hover:shadow-gold-glow"
             >
-              Contactar al ministerio
+              Ver propuestas del ministerio
             </a>
           </div>
         </div>

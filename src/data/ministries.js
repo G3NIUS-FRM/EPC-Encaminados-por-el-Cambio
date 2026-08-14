@@ -1,3 +1,5 @@
+import isaiasGerman from "../assets/isaias-german.jpeg";
+
 export const ministries = [
   {
     id: "interior-policia",
@@ -352,8 +354,7 @@ export const ministries = [
     slug: "deportes-juventud-y-mujer",
     nombre: "Ministerio de Deportes, Juventud y Mujer",
     titular: "Isaias German",
-    imagenTitular:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop&q=80",
+    imagenTitular: isaiasGerman,
     cargo: "Ministro",
     descripcion:
       "Impulsaremos el deporte como herramienta de transformación social, la participación activa de la juventud y la equidad de género en todos los ámbitos de la vida nacional.",

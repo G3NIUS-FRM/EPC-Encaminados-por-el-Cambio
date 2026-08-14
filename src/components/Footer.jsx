@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
-import Icon from "./Icon";
 
 const sections = [
   {
@@ -22,12 +21,12 @@ const sections = [
     ],
   },
   {
-    title: "Contacto",
+    title: "Síguenos",
     links: [
-      { label: "Inscripción", to: "/contacto" },
-      { label: "Prensa", to: "/contacto" },
-      { label: "Voluntariado", to: "/contacto" },
-      { label: "Donaciones", to: "/contacto" },
+      { label: "Instagram", to: "/" },
+      { label: "Facebook", to: "/" },
+      { label: "X (Twitter)", to: "/" },
+      { label: "YouTube", to: "/" },
     ],
   },
 ];
@@ -54,18 +53,6 @@ export default function Footer() {
               Unidos hoy, transformamos mañana. Construyendo juntos la
               República Dominicana que merecemos.
             </p>
-            <div className="mt-6 flex gap-2">
-              {["IG", "FB", "X", "YT"].map((s) => (
-                <a
-                  key={s}
-                  href="#"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 text-xs font-bold transition-all hover:border-gold-400 hover:bg-gold-500 hover:text-navy-900"
-                  aria-label={s}
-                >
-                  {s}
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Link columns */}
