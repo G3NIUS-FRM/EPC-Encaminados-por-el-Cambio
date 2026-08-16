@@ -14,9 +14,11 @@ export default function Members() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
         {/* President card */}
         <div className="mt-14">
-          <div className="group relative overflow-hidden rounded-3xl bg-navy-900 text-white shadow-2xl">
-            <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-gold-500/10 blur-3xl" />
-            <div className="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-gold-500/10 blur-3xl" />
+          <Link
+            to={`/lideres/${presidente.slug}`}
+            className="group relative block overflow-hidden rounded-3xl bg-navy-900 text-white shadow-2xl transition-all hover:shadow-gold-glow">
+            <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-gold-500/10 blur-3xl transition-all group-hover:bg-gold-500/20" />
+            <div className="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-gold-500/10 blur-3xl transition-all group-hover:bg-gold-500/20" />
 
             <div className="relative grid items-stretch lg:grid-cols-2">
               {/* Image */}
@@ -57,39 +59,53 @@ export default function Members() {
                     Diálogo y unidad
                   </span>
                 </div>
+
+                <span className="mt-8 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gold-400 transition-all group-hover:gap-3">
+                  Ver visión y propuestas
+                  <Icon name="arrowRight" className="h-4 w-4" strokeWidth={3} />
+                </span>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* Vice President + Gabinete intro */}
         <div className="mt-8 grid gap-8 lg:grid-cols-3">
           {/* Vice President card */}
-          <div className="group overflow-hidden rounded-3xl bg-white shadow-card transition-all hover:-translate-y-1 hover:shadow-2xl lg:col-span-1">
-            <div className="relative h-64">
+          <Link
+            to={`/lideres/${vicepresidenta.slug}`}
+            className="group flex flex-col overflow-hidden rounded-3xl bg-white shadow-card transition-all hover:-translate-y-1 hover:shadow-2xl lg:col-span-2 lg:flex-row">
+            {/* Image — left on desktop, top on mobile */}
+            <div className="relative h-64 sm:h-72 lg:h-auto lg:w-2/5 lg:min-h-[320px]">
               <img
                 src={vicepresidenta.imagen}
                 alt={vicepresidenta.nombre}
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                style={vicepresidenta.imagePosition ? { objectPosition: vicepresidenta.imagePosition } : undefined}
+                className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-900/70 via-navy-900/20 to-transparent" />
               <span className="absolute top-3 right-3 rounded-full bg-gold-500 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-navy-900">
                 {vicepresidenta.cargo}
               </span>
             </div>
-            <div className="p-6">
-              <h3 className="font-display text-xl font-black uppercase leading-tight text-navy-900">
+            {/* Text — right on desktop, bottom on mobile */}
+            <div className="flex flex-1 flex-col justify-center p-6 lg:p-8">
+              <h3 className="font-display text-xl font-black uppercase leading-tight text-navy-900 sm:text-2xl">
                 {vicepresidenta.nombre}
               </h3>
               <div className="mt-2 h-0.5 w-10 bg-gold-500" />
               <p className="mt-3 text-sm leading-relaxed text-navy-700">
                 {vicepresidenta.bio}
               </p>
+              <span className="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gold-600 transition-all group-hover:gap-3">
+                Ver más
+                <Icon name="arrowRight" className="h-3 w-3" strokeWidth={3} />
+              </span>
             </div>
-          </div>
+          </Link>
 
           {/* Gabinete intro card */}
-          <div className="rounded-3xl bg-gradient-to-br from-navy-900 to-navy-700 p-8 text-white shadow-card lg:col-span-2">
+          <div className="rounded-3xl bg-gradient-to-br from-navy-900 to-navy-700 p-8 text-white shadow-card lg:col-span-1">
             <p className="text-xs font-bold uppercase tracking-[0.3em] text-gold-400">
               Gabinete Completo
             </p>
@@ -132,40 +148,61 @@ export default function Members() {
             </Link>
           </div>
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {ministries.map((m) => (
               <Link
-                key={m.id}
                 to={`/ministerios/${m.slug}`}
-                className="group flex items-center gap-4 rounded-2xl border border-navy-100 bg-white p-4 transition-all hover:border-gold-400 hover:shadow-card">
-                <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full ring-2 ring-gold-500/30 transition-all group-hover:ring-gold-500">
+                key={m.id}
+                className="group card-base flex flex-col overflow-hidden">
+                <div className="relative h-48 overflow-hidden">
                   <img
                     src={m.imagenTitular}
                     alt={m.titular}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    style={m.imagePosition ? { objectPosition: m.imagePosition } : undefined}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-900/30 via-transparent to-transparent" />
-                  <div className="absolute bottom-0 right-0 flex h-6 w-6 items-center justify-center rounded-full bg-gold-500 text-navy-900 ring-2 ring-white">
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-navy-900/30 to-transparent" />
+                  <div className="absolute top-3 right-3 flex h-12 w-12 items-center justify-center rounded-full bg-gold-500 text-navy-900 shadow-lg">
                     <Icon
                       name={m.icono}
-                      className="h-3 w-3"
+                      className="h-6 w-6"
                       strokeWidth={2.5}
                     />
                   </div>
+                  <div className="absolute bottom-3 left-4 right-4 text-white">
+                    <p className="text-xs font-semibold uppercase tracking-widest text-gold-400">
+                      Titular
+                    </p>
+                    <p className="font-display text-lg font-bold">
+                      {m.titular}
+                    </p>
+                  </div>
                 </div>
-                <div className="min-w-0 flex-1">
-                  <p className="truncate font-display text-base font-black uppercase leading-tight text-navy-900 transition-colors group-hover:text-gold-600">
-                    {m.titular}
-                  </p>
-                  <p className="mt-1 line-clamp-2 text-xs text-navy-600">
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="font-display text-base font-black uppercase leading-tight text-navy-900 transition-colors group-hover:text-gold-600">
                     {m.nombre}
+                  </h3>
+                  <div className="mt-2 h-0.5 w-10 bg-gold-500 transition-all group-hover:w-16" />
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-navy-700">
+                    {m.cargo}
                   </p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-gold-600 transition-colors group-hover:text-navy-900">
+                    Ver ministerio completo
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-3 w-3 transition-transform group-hover:translate-x-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={3}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </span>
                 </div>
-                <Icon
-                  name="arrowRight"
-                  className="h-4 w-4 shrink-0 text-gold-600 transition-transform group-hover:translate-x-1"
-                  strokeWidth={3}
-                />
               </Link>
             ))}
           </div>

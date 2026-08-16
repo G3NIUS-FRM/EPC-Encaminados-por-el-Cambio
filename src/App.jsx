@@ -12,6 +12,7 @@ import NewsPage from "./pages/NewsPage";
 import NewsDetailPage from "./pages/NewsDetailPage";
 import PlansPage from "./pages/PlansPage";
 import PlanDetailPage from "./pages/PlanDetailPage";
+import LeadershipDetailPage from "./pages/LeadershipDetailPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/sobre-nosotros" element={<AboutPage />} />
           <Route path="/miembros" element={<MembersPage />} />
+          <Route path="/lideres/:slug" element={<LeadershipDetailPage />} />
           <Route path="/ministerios" element={<MinistriesPage />} />
           <Route
             path="/ministerios/:slug"

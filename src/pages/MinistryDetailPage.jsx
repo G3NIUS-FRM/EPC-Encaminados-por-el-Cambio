@@ -5,6 +5,7 @@ import { news } from "../data/news";
 import PageHeader from "../components/PageHeader";
 import Logo from "../components/Logo";
 import Icon from "../components/Icon";
+import DonutChart from "../components/DonutChart";
 
 export default function MinistryDetailPage() {
   const { slug } = useParams();
@@ -166,32 +167,24 @@ export default function MinistryDetailPage() {
               alt={ministry.nombre}
               className="rounded-2xl shadow-card"
             />
-            <div className="mt-6 rounded-2xl border-2 border-gold-400 bg-gold-50 p-6">
-              <p className="text-xs font-bold uppercase tracking-widest text-gold-700">
-                Equipo Ministerial
-              </p>
-              <ul className="mt-3 space-y-2">
-                {ministry.equipo.map((p, i) => (
-                  <li
-                    key={i}
-                    className="flex items-start gap-3 border-b border-gold-200 pb-2 last:border-0 last:pb-0"
-                  >
-                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-500 text-[10px] font-black text-navy-900">
-                      {i + 1}
-                    </span>
-                    <div>
-                      <p className="text-sm font-bold text-navy-900">
-                        {p.nombre}
-                      </p>
-                      <p className="text-xs text-navy-600">{p.cargo}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </aside>
         </div>
       </section>
+
+      {/* Prioridades (donut) — sólo si la cartera define prioridades */}
+      {ministry.prioridades && (
+        <section className="bg-white py-16 sm:py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+            <DonutChart
+              data={ministry.prioridades}
+              title={`Prioridades del ${ministry.nombre}`}
+              subtitle="Distribución propuesta de las prioridades de gestión del Gobierno EPC 2026."
+              size={320}
+              thickness={56}
+            />
+          </div>
+        </section>
+      )}
 
       {/* Propuestas detalladas */}
       <section className="bg-navy-50 py-16 sm:py-20">
@@ -256,44 +249,6 @@ export default function MinistryDetailPage() {
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Equipo del ministerio */}
-      <section className="bg-white py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-          <div className="text-center">
-            <p className="text-sm font-bold uppercase tracking-[0.3em] text-gold-600">
-              Equipo Ministerial
-            </p>
-            <h2 className="mt-3 font-display text-3xl font-black uppercase leading-tight text-navy-900 sm:text-4xl">
-              Quiénes lo integran
-            </h2>
-            <div className="gold-divider mt-4" />
-            <p className="mx-auto mt-4 max-w-2xl text-base text-navy-700">
-              Profesionales y servidores públicos comprometidos con el cambio.
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {ministry.equipo.map((p, i) => (
-              <div
-                key={i}
-                className="group rounded-2xl border border-navy-100 bg-white p-6 text-center shadow-card transition-all hover:-translate-y-1 hover:border-gold-400 hover:shadow-2xl"
-              >
-                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-navy-900 to-navy-700 text-gold-400 transition-all group-hover:from-gold-500 group-hover:to-gold-600 group-hover:text-navy-900">
-                  <Icon name="users" className="h-9 w-9" strokeWidth={1.5} />
-                </div>
-                <div className="mt-2 text-xs font-bold uppercase tracking-widest text-gold-600">
-                  {p.cargo}
-                </div>
-                <p className="mt-2 font-display text-base font-black uppercase leading-tight text-navy-900">
-                  {p.nombre}
-                </p>
-                <div className="mx-auto mt-3 h-0.5 w-10 rounded-full bg-gold-500" />
-              </div>
-            ))}
           </div>
         </div>
       </section>
