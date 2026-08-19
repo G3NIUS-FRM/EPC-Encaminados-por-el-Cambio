@@ -215,24 +215,25 @@ export const ministries = [
     ],
     propuestas: [
       {
-        titulo: 'Diplomacia Económica',
+        titulo:
+          'Desarrollo de nuestras infraestructuras militares y públicas en el exterior',
         descripcion:
-          'Reorientación de la política exterior hacia la atracción de inversión, apertura de mercados para productos dominicanos y acuerdos comerciales estratégicos.',
+          'Extender la cantidad de bases militares y mejorar la seguridad en nuestros consulados.',
       },
       {
-        titulo: 'Modernización Militar',
+        titulo: 'Modernizar las Fuerzas Armadas',
         descripcion:
-          'Programa de inversión en equipamiento, capacitación y bienestar de las tropas, con énfasis en operaciones cibernéticas y de respuesta a desastres.',
+          'Mejorar equipamiento, entrenamiento y formación integral de los militares. Incorporar cursos de diplomacia y resolución pacífica de conflictos para crear una fuerza más preparada, educada y eficiente.',
       },
       {
-        titulo: 'Atención a la Diáspora',
+        titulo: 'Coordinación fronteriza',
         descripcion:
-          'Fortalecimiento de los consulados, voto en el extranjero operativo y programas de retorno productivo para los dominicanos en el exterior.',
+          'Eficientizar y mejorar el despliegue de tropas en la frontera, construcción de bases en puntos específicos para prevenir amenazas transnacionales e inmigración ilegal.',
       },
       {
-        titulo: 'Seguridad Marítima',
+        titulo: 'Impulsar acuerdos de coordinación internacional',
         descripcion:
-          'Refuerzo del combate al narcotráfico, pesca ilegal y protección de los recursos marinos en coordinación con países aliados.',
+          'Negociar tratados, convenios y negociaciones en materia de seguridad nacional e internacional, defensa, comercio, desarrollo tecnológico, desarrollo educacional y ayuda humanitaria.',
       },
     ],
     equipo: [
@@ -245,10 +246,10 @@ export const ministries = [
       { nombre: 'Canciller adjunto', cargo: 'Por designar' },
     ],
     metas: [
-      'Modernizar el 100% del equipamiento militar en 10 años',
-      'Abrir 10 nuevas embajadas en mercados estratégicos',
-      'Atender a 2 millones de dominicanos en el exterior',
-      'Fortalecer la seguridad marítima del Caribe',
+      'Fortalecer la vigilancia y protección fronteriza, mediante una mejor distribución de recursos, personal y tecnología, con el objetivo de reducir en un 35 % los niveles de inmigración irregular y combatir actividades ilícitas relacionadas con el tráfico de personas y mercancías.',
+      'Establecer acuerdos de cooperación educativa con los países de la región, creando una estructura internacional que facilite intercambios académicos, becas, programas de movilidad y proyectos de investigación para estudiantes universitarios.',
+      'Crear mecanismos de coordinación regional en materia de seguridad, mediante la cooperación entre las fuerzas de seguridad y defensa de los países participantes para combatir el narcotráfico, el crimen organizado, el terrorismo y otras amenazas transnacionales, respetando la soberanía y las leyes de cada Estado.',
+      'Renegociar, revisar o solicitar la modificación de acuerdos y contratos internacionales con entidades y empresas que hayan incumplido sus compromisos o que estén provocando daños ambientales o perjuicios económicos al país.',
     ],
     icono: 'globe',
   },
