@@ -8,6 +8,8 @@ import viannyCampechano from '../assets/vianny_campechano.jpeg';
 import manuelArturo from '../assets/manuel-arturo.jpeg';
 import angelLeonardo from '../assets/angel-leonardo.jpg';
 import valeryMichelle from '../assets/valery-michelle.jpeg';
+import brahianCeballos from '../assets/brahian-ceballos.jpeg';
+import carlaCarrasco from '../assets/carla-carrasco.png';
 
 export const ministries = [
   {
@@ -74,8 +76,8 @@ export const ministries = [
     slug: 'medio-ambiente-energia-y-minas',
     nombre: 'Ministerio de Medio Ambiente, Energía y Minas',
     titular: 'Brahian Ceballos Valerio',
-    imagenTitular:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&q=80',
+    imagenTitular: brahianCeballos,
+    imagePosition: 'center 20%',
     cargo: 'Ministro',
     descripcion:
       'Defensores del patrimonio natural. Impulsaremos la transición hacia energías renovables, la protección de cuencas hidrográficas y un modelo de desarrollo sostenible para las futuras generaciones.',
@@ -85,6 +87,8 @@ export const ministries = [
       'https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=1200&q=80',
     imagenSecundaria:
       'https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=1200&q=80',
+    vision:
+      'Ser una institución reconocida por su eficacia en la conservación del medio ambiente y los recursos naturales, enfocada en el desarrollo sostenible del país, con una gestión funcionalmente integrada, eficiente y de calidad.',
     metricas: [
       { valor: '70%', label: 'Energía renovable' },
       { valor: '100K', label: 'Hectáreas reforestadas' },
@@ -93,24 +97,24 @@ export const ministries = [
     ],
     propuestas: [
       {
-        titulo: 'Transición Energética',
+        titulo: 'Reforestación focalizada de cuencas hidrográficas',
         descripcion:
-          'Plan nacional para alcanzar el 70% de la matriz eléctrica con fuentes renovables (solar, eólica, hidroeléctrica) en 10 años, con incentivos fiscales para proyectos verdes.',
+          'Implementar proyectos prioritarios de siembra para proteger y restaurar las principales fuentes hídricas del país.',
       },
       {
-        titulo: 'Reforestación Masiva',
+        titulo: 'Fortalecimiento de la formación ecológica',
         descripcion:
-          'Programa nacional para reforestar 100,000 hectáreas en zonas degradadas, con participación comunitaria y especies endémicas.',
+          'Desarrollar programas de educación ambiental orientados a articular esfuerzos entre las comunidades locales y los sectores productivos.',
       },
       {
-        titulo: 'Protección de Cuencas',
+        titulo: 'Planificación territorial equilibrada',
         descripcion:
-          'Declaratoria de protección para las 30 cuencas hidrográficas más importantes, con planes de manejo sostenible y monitoreo constante.',
+          'Diseñar e impulsar normativas que aseguren la preservación de la biodiversidad autóctona y el uso sostenible del suelo.',
       },
       {
-        titulo: 'Economía Circular',
+        titulo: 'Gestión integral del agua y resiliencia climática',
         descripcion:
-          'Implementación del programa nacional de reciclaje, incentivos a empresas verdes y prohibición de plásticos de un solo uso.',
+          'Crear políticas públicas enfocadas en el aprovechamiento consciente del recurso agua y la adaptación ante los retos del cambio climático.',
       },
     ],
     equipo: [
@@ -120,10 +124,10 @@ export const ministries = [
       { nombre: 'Viceministro de Minas', cargo: 'Por designar' },
     ],
     metas: [
-      'Reducir emisiones de carbono en un 50% en 10 años',
-      'Proteger el 100% de las cuencas hidrográficas del país',
-      'Alcanzar el 90% de reciclaje en residuos sólidos urbanos',
-      'Generar 5,000 empleos verdes',
+      'Incremento de la cobertura forestal: aumentar la superficie arbolada mediante programas intensivos de reforestación en zonas estratégicas.',
+      'Saneamiento de recursos hídricos: garantizar la protección, limpieza y recuperación de los ríos y cuencas del territorio nacional.',
+      'Administración sostenible de áreas protegidas: robustecer la vigilancia y conservación de los ecosistemas y espacios protegidos.',
+      'Desarrollo sostenible comunitario: asegurar que las acciones de preservación ambiental contribuyan directamente a la estabilidad socioeconómica de las comunidades.',
     ],
     icono: 'leaf',
   },
@@ -433,18 +437,20 @@ export const ministries = [
     id: 'turismo',
     slug: 'turismo-y-cultura',
     nombre: 'Ministerio de Turismo y Cultura',
-    titular: 'Carla Rodríguez',
-    imagenTitular:
-      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&q=80',
+    titular: 'Carla Carrasco',
+    imagenTitular: carlaCarrasco,
+    imagePosition: 'center 30%',
     cargo: 'Ministra',
     descripcion:
       'Posicionaremos al país como destino turístico de clase mundial, protegiendo y promoviendo nuestra riqueza cultural, histórica y natural como activos estratégicos de desarrollo.',
     descripcionCompleta:
-      "El Ministerio de Turismo y Cultura, dirigido por Carla Rodríguez, articulará la política turística y cultural del país como motores complementarios de desarrollo económico e identidad nacional.\n\nEl turismo es uno de los principales generadores de divisas y empleo del país. Nuestra visión es diversificar la oferta más allá del tradicional modelo 'sol y playa', incorporando turismo cultural, ecológico, de aventura, gastronómico y de bienestar. Esto implica inversión en infraestructura, capacitación del personal y promoción internacional.\n\nLa cultura es el alma de nuestra identidad. Trabajaremos por la protección del patrimonio, el apoyo a los creadores y artistas, y el acceso universal a la vida cultural. La cultura no es un gasto: es una inversión en cohesión social y desarrollo humano.",
+      "El Ministerio de Turismo y Cultura, dirigido por Carla Carrasco, articulará la política turística y cultural del país como motores complementarios de desarrollo económico e identidad nacional.\n\nEl turismo es uno de los principales generadores de divisas y empleo del país. Nuestra visión es diversificar la oferta más allá del tradicional modelo 'sol y playa', incorporando turismo cultural, ecológico, de aventura, gastronómico y de bienestar. Esto implica inversión en infraestructura, capacitación del personal y promoción internacional.\n\nLa cultura es el alma de nuestra identidad. Trabajaremos por la protección del patrimonio, el apoyo a los creadores y artistas, y el acceso universal a la vida cultural. La cultura no es un gasto: es una inversión en cohesión social y desarrollo humano.",
     imagen:
       'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80',
     imagenSecundaria:
       'https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=1200&q=80',
+    vision:
+      'Ser una institución comprometida con la preservación, promoción y difusión de la cultura dominicana, fortaleciendo nuestra identidad nacional y garantizando que nuestro patrimonio y nuestras expresiones culturales sean valorados y transmitidos a las futuras generaciones.',
     metricas: [
       { valor: '10M', label: 'Turistas al año' },
       { valor: '$8B', label: 'Ingresos turísticos' },
@@ -453,37 +459,37 @@ export const ministries = [
     ],
     propuestas: [
       {
-        titulo: 'Turismo Diversificado',
+        titulo: 'Impulsar el turismo cultural',
         descripcion:
-          'Desarrollo de 20 nuevos destinos turísticos más allá del sol y playa: ecoturismo, cultural, aventura, gastronómico y de bienestar.',
+          'Promover rutas y experiencias que destaquen nuestra historia, música, gastronomía, artesanía y tradiciones.',
       },
       {
-        titulo: 'Marca País',
+        titulo: 'Fortalecer el turismo sostenible',
         descripcion:
-          "Fortalecimiento de la marca 'República Dominicana' en mercados estratégicos con campañas de promoción internacional y diplomacia turística.",
+          'Proteger playas, áreas naturales y espacios históricos mediante prácticas responsables y sostenibles.',
       },
       {
-        titulo: 'Patrimonio Cultural',
+        titulo: 'Promover nuevos destinos turísticos',
         descripcion:
-          'Protección, restauración y puesta en valor del patrimonio cultural y arquitectónico, con programas de educación patrimonial en escuelas.',
+          'Desarrollar y promocionar destinos fuera de las zonas turísticas tradicionales para distribuir mejor las oportunidades.',
       },
       {
-        titulo: 'Economía Cultural',
+        titulo: 'Apoyar a las comunidades locales',
         descripcion:
-          'Apoyo a artistas, creadores y emprendedores culturales con financiamiento, formación y mercados, reconociendo la cultura como sector económico estratégico.',
+          'Crear programas para que emprendedores, artesanos y pequeños negocios puedan beneficiarse directamente del crecimiento turístico.',
       },
     ],
     equipo: [
-      { nombre: 'Carla Rodríguez', cargo: 'Ministra' },
+      { nombre: 'Carla Carrasco', cargo: 'Ministra' },
       { nombre: 'Viceministra de Turismo', cargo: 'Por designar' },
       { nombre: 'Viceministra de Cultura', cargo: 'Por designar' },
       { nombre: 'Director de Promoción Turística', cargo: 'Por designar' },
     ],
     metas: [
-      'Alcanzar 10 millones de turistas anuales',
-      'Crear 200,000 nuevos empleos turísticos',
-      'Triplicar el presupuesto para cultura',
-      'Catalogar el 100% del patrimonio cultural nacional',
+      'Aumentar la llegada de visitantes: superar progresivamente las cifras actuales y atraer turistas durante todo el año.',
+      'Fortalecer el patrimonio cultural: restaurar, conservar y promover espacios históricos y culturales del país.',
+      'Generar más oportunidades: incrementar la participación de comunidades y emprendedores locales en la actividad turística.',
+      'Posicionar a República Dominicana: consolidar al país como uno de los principales destinos turísticos y culturales del Caribe.',
     ],
     icono: 'palmtree',
   },
@@ -493,6 +499,7 @@ export const ministries = [
     nombre: 'Ministerio Administrativo de la Presidencia',
     titular: 'Andry Rogelio Piñeiro Chalas',
     imagenTitular: andryPineiro,
+    imagePosition: 'center 30%',
     cargo: 'Ministro',
     descripcion:
       'Ser el pilar administrativo de la Presidencia, caracterizado por la eficiencia, la transparencia y la excelencia operativa, garantizando un soporte técnico y logístico de alto nivel que impulse la gestión gubernamental.',
