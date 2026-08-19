@@ -84,28 +84,26 @@ export default function MinistryDetailPage() {
           </div>
 
           {/* Minister card */}
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
             <p className="text-xs font-bold uppercase tracking-widest text-gold-400">
               Titular
             </p>
-            <div className="mt-3 flex items-center gap-4">
-              <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full ring-2 ring-gold-500/50 ring-offset-2 ring-offset-navy-900/30">
+            <div className="mt-4 flex flex-col items-center text-center">
+              <div className="relative h-44 w-44 shrink-0 overflow-hidden rounded-full ring-4 ring-gold-500/50 ring-offset-4 ring-offset-navy-900/30">
                 <img
                   src={ministry.imagenTitular}
                   alt={ministry.titular}
                   className="h-full w-full object-cover"
                 />
               </div>
-              <div>
-                <h2 className="font-display text-xl font-black uppercase leading-tight">
-                  {ministry.titular}
-                </h2>
-                <p className="mt-1 text-xs uppercase tracking-wider text-gold-400">
-                  {ministry.cargo}
-                </p>
-              </div>
+              <h2 className="mt-5 font-display text-2xl font-black uppercase leading-tight">
+                {ministry.titular}
+              </h2>
+              <p className="mt-1 text-xs uppercase tracking-wider text-gold-400">
+                {ministry.cargo}
+              </p>
             </div>
-            <div className="mt-4 flex items-center gap-3 rounded-xl bg-navy-800/50 p-3">
+            <div className="mt-6 flex items-center gap-3 rounded-xl bg-navy-800/50 p-4">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold-500 text-navy-900">
                 <Icon name={ministry.icono} className="h-5 w-5" strokeWidth={2.5} />
               </div>
@@ -118,7 +116,7 @@ export default function MinistryDetailPage() {
             </div>
             <a
               href="#"
-              className="mt-4 block rounded-full bg-gold-500 px-4 py-2.5 text-center text-sm font-bold text-navy-900 transition-all hover:bg-gold-400 hover:shadow-gold-glow"
+              className="mt-5 block rounded-full bg-gold-500 px-4 py-3 text-center text-sm font-bold text-navy-900 transition-all hover:bg-gold-400 hover:shadow-gold-glow"
             >
               Ver propuestas del ministerio
             </a>
@@ -155,11 +153,23 @@ export default function MinistryDetailPage() {
               Hacia dónde vamos
             </h2>
             <div className="gold-divider mt-4 !ml-0" />
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-navy-700 sm:text-lg">
-              {ministry.descripcionCompleta.split("\n\n").map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-            </div>
+
+            {ministry.vision && (
+              <blockquote className="mt-6 rounded-2xl border-l-4 border-gold-500 bg-gold-50/60 p-6 text-base italic leading-relaxed text-navy-800 shadow-sm sm:text-lg">
+                <span className="block font-display text-xs font-black not-italic uppercase tracking-[0.3em] text-gold-700">
+                  Visión del Ministerio
+                </span>
+                <p className="mt-3">{ministry.vision}</p>
+              </blockquote>
+            )}
+
+            {ministry.descripcionCompleta && (
+              <div className="mt-6 space-y-4 text-base leading-relaxed text-navy-700 sm:text-lg">
+                {ministry.descripcionCompleta.split("\n\n").map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+            )}
           </div>
           <aside>
             <img

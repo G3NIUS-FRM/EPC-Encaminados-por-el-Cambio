@@ -4,6 +4,10 @@ import adrianRamirez from '../assets/adrian-ramirez.jpeg';
 import andryPineiro from '../assets/andry-piñeiro.jpeg';
 import melvisComas from '../assets/melvis-comas.jpeg';
 import heidyMoronta from '../assets/heidy-moronta.jpeg';
+import viannyCampechano from '../assets/vianny_campechano.jpeg';
+import manuelArturo from '../assets/manuel-arturo.jpeg';
+import angelLeonardo from '../assets/angel-leonardo.jpg';
+import valeryMichelle from '../assets/valery-michelle.jpeg';
 
 export const ministries = [
   {
@@ -21,6 +25,8 @@ export const ministries = [
       'https://images.unsplash.com/photo-1453873531674-2151bcd01707?w=1200&q=80',
     imagenSecundaria:
       'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&q=80',
+    vision:
+      'Construir un país más seguro, organizado y unido, donde los ciudadanos puedan vivir tranquilos, con instituciones policiales eficientes y cercanas a la comunidad, garantizando el orden público y el respeto a los derechos de todos.',
     metricas: [
       { valor: '15,000', label: 'Nuevos agentes' },
       { valor: '500', label: 'Cámaras inteligentes' },
@@ -29,24 +35,24 @@ export const ministries = [
     ],
     propuestas: [
       {
-        titulo: 'Policía de Proximidad',
+        titulo: 'Fortalecer la Policía Nacional',
         descripcion:
-          'Implementación del modelo de policía comunitaria en cada barrio, con agentes capacitados para mediar conflictos y trabajar directamente con líderes vecinales.',
+          'Mejorar la capacitación, equipamiento y preparación de los agentes para responder eficazmente ante la delincuencia.',
       },
       {
-        titulo: 'Tecnología y Videovigilancia',
+        titulo: 'Prevención del delito en las comunidades',
         descripcion:
-          'Red nacional de 500 cámaras con reconocimiento facial y de placas, integradas a un centro de comando unificado con respuesta en menos de 5 minutos.',
+          'Crear programas deportivos, educativos y culturales dirigidos especialmente a jóvenes de zonas vulnerables.',
       },
       {
-        titulo: 'Reforma Policial Integral',
+        titulo: 'Mayor vigilancia y tecnología',
         descripcion:
-          'Reestructuración de la formación policial, nuevos protocolos de uso de fuerza, sistema de ascensos por mérito y fiscalización anticorrupción.',
+          'Ampliar el uso de cámaras de seguridad y sistemas tecnológicos para prevenir y combatir los delitos.',
       },
       {
-        titulo: 'Programa Barrio Seguro',
+        titulo: 'Policía cercana a la ciudadanía',
         descripcion:
-          'Intervención integral en barrios vulnerables combinando presencia policial, programas sociales, iluminación LED y recuperación de espacios públicos.',
+          'Establecer programas de policía comunitaria para mejorar la comunicación y confianza entre los agentes y los ciudadanos.',
       },
     ],
     equipo: [
@@ -56,10 +62,10 @@ export const ministries = [
       { nombre: 'Director General de Policía', cargo: 'Por designar' },
     ],
     metas: [
-      'Reducir la criminalidad en un 40% en 5 años',
-      'Alcanzar tiempo de respuesta policial menor a 5 minutos en zonas urbanas',
-      'Capacitar al 100% de los agentes en protocolos de derechos humanos',
-      'Implementar el sistema de denuncia digital en todo el país',
+      'Reducir los índices de delincuencia mediante programas de prevención y una respuesta policial más eficiente',
+      'Mejorar la confianza de la población en la Policía Nacional, promoviendo un trato respetuoso, profesional y cercano.',
+      'Modernizar las instituciones de seguridad, incorporando mejores tecnologías, capacitación y sistemas de información.',
+      'Garantizar el orden y la seguridad ciudadana, trabajando junto con las comunidades y otras instituciones del Estado.',
     ],
     icono: 'shield',
   },
@@ -184,11 +190,13 @@ export const ministries = [
     slug: 'defensa-y-relaciones-exteriores',
     nombre: 'Ministerio de Defensa y Relaciones Exteriores',
     titular: 'Angel Leonardo López Cordones',
-    imagenTitular:
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&q=80',
+    imagenTitular: angelLeonardo,
+    imagePosition: 'center 30%',
     cargo: 'Ministro',
     descripcion:
       'Fortaleceremos la soberanía nacional y la presencia del país en el escenario internacional, defendiendo los intereses de la República Dominicana con diplomacia activa y profesional.',
+    vision:
+      'Nuestro objetivo al unir el Ministerio de Defensa y el Ministerio de Relaciones Exteriores es construir una institución integral que combine la diplomacia y la defensa para proteger los intereses nacionales y fortalecer la seguridad del Estado, reducir los costos operativos y aumentar la capacidad para enfrentar desafíos internacionales del país.\n\nBajo el mando de nuestro ministro Ángel Leonardo López Cordones, tenemos como objetivo mejorar la eficiencia de ambos ministerios a través de la unión para lograr beneficios y resultados más significativos al futuro.\n\nSabemos y reconocemos que el plan de unión de ministerios que presenta nuestro partido es un plan que tiene grandes desafíos y complicaciones en su momento de accionar, pero gracias a nuestro planteamiento estructurado, basado en investigaciones y puesto bajo la supervisión de expertos, pensamos que es un plan razonable y es posible de lograr con el debido esfuerzo y apoyo total de todos nuestros compatriotas.\n\nEsto pudiera reducir tantos gastos como mejorar la eficiencia en muchas áreas del país lo que ayudaría a que se tuviera que pedir menos préstamos, se redujera el presupuesto nacional anual y se pudiera ir pagando las deudas externas del país, así estabilizar mejor nuestra economía y poder desarrollar proyectos para mejorar la calidad de vida del dominicano.',
     descripcionCompleta:
       'El Ministerio de Defensa y Relaciones Exteriores, encabezado por Angel Leonardo López Cordones, tiene la responsabilidad de proteger la soberanía nacional y proyectar los intereses del país en el concierto internacional.\n\nNuestras Fuerzas Armadas requieren una transformación que las haga más profesionales, modernas y respetuosas de los derechos humanos. Simultáneamente, debemos fortalecer una diplomacia activa que defienda los intereses de los dominicanos, tanto en el país como en la diáspora, que supera los dos millones de personas.\n\nLos retos del siglo XXI incluyen la ciberseguridad, el crimen transnacional, el cambio climático como amenaza a la seguridad y la cooperación regional en el Caribe. Estas dimensiones guiarán nuestra política exterior y de defensa.',
     imagen:
@@ -245,8 +253,7 @@ export const ministries = [
     slug: 'educacion-y-educacion-superior',
     nombre: 'Ministerio de Educación y Educación Superior',
     titular: 'Vianny Campechano',
-    imagenTitular:
-      'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&q=80',
+    imagenTitular: viannyCampechano,
     cargo: 'Ministra',
     descripcion:
       'La educación es el motor del cambio. Reformaremos el sistema educativo para formar ciudadanos competitivos, críticos y creativos, con acceso universal a la educación superior de calidad.',
@@ -256,6 +263,8 @@ export const ministries = [
       'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80',
     imagenSecundaria:
       'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=1200&q=80',
+    vision:
+      'Garantizar una educación de calidad, inclusiva e innovadora que forme ciudadanos preparados para enfrentar los desafíos del futuro y contribuir al desarrollo sostenible de la República Dominicana.',
     metricas: [
       { valor: '8h', label: 'Jornada extendida' },
       { valor: '100%', label: 'Conectividad escolar' },
@@ -264,24 +273,24 @@ export const ministries = [
     ],
     propuestas: [
       {
-        titulo: 'Jornada Extendida',
+        titulo: 'Mejorar la infraestructura educativa',
         descripcion:
-          'Implementación progresiva de la jornada extendida en todas las escuelas públicas, con alimentación escolar, actividades deportivas y refuerzo académico.',
+          'Rehabilitar escuelas y universidades garantizando espacios seguros y adecuados para el aprendizaje en todo el país.',
       },
       {
-        titulo: 'Conectividad Total',
+        titulo: 'Impulsar la educación tecnológica',
         descripcion:
-          'Internet de alta velocidad en cada escuela pública del país, con dispositivos tecnológicos para los estudiantes y plataformas digitales de aprendizaje.',
+          'Ampliar el acceso a herramientas digitales, internet y formación en competencias tecnológicas para estudiantes y docentes.',
       },
       {
-        titulo: 'Programa Nacional de Becas',
+        titulo: 'Fortalecer la formación docente',
         descripcion:
-          'Becas universitarias y técnicas para 50,000 jóvenes cada año, con énfasis en ciencia, tecnología, ingeniería y matemáticas.',
+          'Capacitación continua y actualización de metodologías de enseñanza para garantizar educación de calidad.',
       },
       {
-        titulo: 'Reforma Curricular',
+        titulo: 'Ampliar las oportunidades educativas',
         descripcion:
-          'Nuevo currículo enfocado en competencias del siglo XXI: pensamiento crítico, creatividad, colaboración, comunicación y dominio digital.',
+          'Aumentar becas, programas de apoyo y acceso a la educación superior para jóvenes de todo el país.',
       },
     ],
     equipo: [
@@ -291,10 +300,10 @@ export const ministries = [
       { nombre: 'Director de Formación Docente', cargo: 'Por designar' },
     ],
     metas: [
-      'Lograr jornada extendida en el 100% de escuelas públicas',
-      'Aumentar la cobertura de educación superior al 70%',
-      'Mejorar 30 puntos en pruebas PISA',
-      'Crear 100 nuevas carreras técnicas pertinentes',
+      'Reducir la brecha educativa y digital entre las diferentes regiones del país.',
+      'Elevar la calidad del aprendizaje en todos los niveles educativos.',
+      'Aumentar el acceso a la educación superior y las oportunidades de becas.',
+      'Formar estudiantes preparados para el mercado laboral, con énfasis en tecnología, innovación y emprendimiento.',
     ],
     icono: 'graduationCap',
   },
@@ -303,13 +312,14 @@ export const ministries = [
     slug: 'trabajo-y-administraciones-publicas',
     nombre: 'Ministerio de Trabajo y Administraciones Públicas',
     titular: 'Valery Michelle Rosario Rodríguez',
-    imagenTitular:
-      'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&q=80',
+    imagenTitular: valeryMichelle,
     cargo: 'Ministra',
     descripcion:
-      'Promoveremos empleos dignos, la formalización del mercado laboral y una administración pública eficiente, transparente y cercana al ciudadano.',
+      'Un ministerio, dos misiones: trabajo digno para todos, y un Estado que finalmente trabaja para ti.',
     descripcionCompleta:
       'El Ministerio de Trabajo y Administraciones Públicas, bajo el liderazgo de Valery Michelle Rosario Rodríguez, tiene dos ejes fundamentales: garantizar los derechos laborales de los trabajadores y modernizar la administración pública para servir mejor al ciudadano.\n\nEn materia laboral, nuestra prioridad es avanzar hacia la formalización del empleo, la dignificación de los salarios y la protección de los derechos de los trabajadores dominicanos. Impulsaremos el diálogo social tripartito (gobierno, empleadores y sindicatos) para construir consensos.\n\nEn administraciones públicas, modernizaremos los procesos, digitalizaremos los trámites y promoveremos la meritocracia en el servicio público. Queremos un Estado eficiente, transparente y cercano a la gente.',
+    vision:
+      'Convertir a República Dominicana en un referente del Caribe en materia de trabajo adaptado al futuro y Estado inteligente al servicio del ciudadano, donde ningún trabajador quede desprotegido y ningún dominicano tenga que pelear contra la burocracia para ejercer sus derechos.',
     imagen:
       'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&q=80',
     imagenSecundaria:
@@ -322,24 +332,24 @@ export const ministries = [
     ],
     propuestas: [
       {
-        titulo: 'Empleo Digno',
+        titulo: 'Tu historial laboral, contigo siempre',
         descripcion:
-          'Reforma del Código de Trabajo para fortalecer la protección de los trabajadores, con salario mínimo digno, prestaciones justas y estabilidad laboral.',
+          'Crearemos el Pasaporte Laboral Digital: un registro único de tu experiencia, tus habilidades y tus aportes a la seguridad social que te acompaña sin importar dónde trabajes. Si eres conductor, freelancer, empleado de una empresa o trabajas por temporadas, podrás construir tu pensión y tu seguro de salud poco a poco, a tu ritmo y según lo que ganes.',
       },
       {
-        titulo: 'Formalización',
+        titulo: 'Protección real para quienes trabajan en apps',
         descripcion:
-          'Programa nacional para reducir la informalidad laboral, con incentivos a las empresas que formalicen a sus empleados y simplificación de trámites.',
+          'Los repartidores y conductores de plataformas digitales merecen reglas claras: seguro contra accidentes, aportes a su pensión, y el derecho a saber por qué una aplicación los suspendió o les asignó menos trabajo. Crearemos además un fondo de capacitación que conecte directamente a los trabajadores con empleos reales en tecnología, idiomas y los sectores del futuro.',
       },
       {
-        titulo: 'Administración Pública Moderna',
+        titulo: 'Un Estado que se vigila a sí mismo',
         descripcion:
-          'Reforma integral del Estado para digitalizar el 100% de los trámites, eliminar la corrupción y profesionalizar el servicio público por mérito.',
+          'Usaremos tecnología para detectar irregularidades en la nómina pública — nombramientos duplicados, contrataciones sospechosas, patrones anómalos— antes de que se conviertan en un problema mayor. Cada alerta será revisada por personas, nunca decidida solo por una máquina, y publicaremos los resultados para que todos los dominicanos puedan verlos.',
       },
       {
-        titulo: 'Capacitación Laboral',
+        titulo: 'Empleos públicos por mérito, no por contactos',
         descripcion:
-          'Sistema nacional de formación técnica continua, en alianza con el sector privado, para que los trabajadores adquieran las habilidades del futuro.',
+          'Se acabaron las "botellas". Cada vacante en el sector público se publicará abiertamente, con una primera evaluación a ciegas —sin nombres, sin partidos, sin fotos— para que gane el más capacitado, no el más conectado. Impulsaremos también jornadas de trabajo más flexibles en las instituciones públicas, midiendo resultados reales antes de expandirlas.',
       },
     ],
     equipo: [
@@ -352,10 +362,12 @@ export const ministries = [
       { nombre: 'Director de Función Pública', cargo: 'Por designar' },
     ],
     metas: [
-      'Aumentar el empleo formal al 70%',
-      'Digitalizar el 100% de los trámites del Estado',
-      'Duplicar el salario mínimo en 5 años',
-      'Capacitar a 100,000 trabajadores anualmente',
+      '1 millón de trabajadores con su Pasaporte Laboral Digital activo, aportando a su futuro.',
+      '100,000 trabajadores de plataformas con seguro de accidentes y aportes a pensión.',
+      '20,000 dominicanos capacitados y conectados a empleos reales en sectores de futuro.',
+      '40% menos irregularidades confirmadas en la nómina del Estado.',
+      'La mitad de las nuevas plazas públicas cubiertas por mérito, no por recomendación.',
+      '30% de las instituciones públicas con jornadas más flexibles, sin sacrificar el servicio al ciudadano.',
     ],
     icono: 'briefcase',
   },
@@ -371,7 +383,7 @@ export const ministries = [
     descripcionCompleta:
       'El Ministerio de Deportes, Juventud y Mujer, bajo la conducción de Isaias German, será el ente rector que consolidará el deporte como una herramienta de transformación social, el desarrollo integral de la juventud y el empoderamiento de la mujer, para construir una sociedad más inclusiva, equitativa y con igualdad de oportunidades.\n\nNuestra gestión articulará políticas para que el deporte sea motor de cohesión social, prevención de la violencia y creación de oportunidades reales para mujeres y jóvenes en todo el territorio nacional. Promoveremos la participación activa de la juventud y la equidad de género en todos los ámbitos de la vida nacional.',
     imagen:
-      'https://images.unsplash.com/photo-1461896836936-ffe607ba8211?w=1200&q=80',
+      'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80',
     imagenSecundaria:
       'https://images.unsplash.com/photo-1517649763962-0c623066013b?w=1200&q=80',
     metricas: [
@@ -537,8 +549,7 @@ export const ministries = [
     slug: 'agricultura-industria-comercio-y-mipymes',
     nombre: 'Ministerio de Agricultura, Industria, Comercio y MIPYMES',
     titular: 'Manuel Arturo Puello',
-    imagenTitular:
-      'https://images.unsplash.com/photo-1566492031773-4f4e44671824?w=300&h=300&fit=crop&q=80',
+    imagenTitular: manuelArturo,
     cargo: 'Ministro',
     descripcion:
       'Fortaleceremos al campo, a los emprendedores y a las pequeñas empresas, motores reales de la economía nacional, con acceso a financiamiento, tecnología y mercados.',
@@ -548,6 +559,8 @@ export const ministries = [
       'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1200&q=80',
     imagenSecundaria:
       'https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=1200&q=80',
+    vision:
+      'Ser la institución líder a nivel nacional y regional en el diseño y ejecución de políticas que impulsen el crecimiento económico y social de los sectores productivos, con una gestión eficiente, transparente y cercana, apoyada por un equipo altamente competente y comprometido con el desarrollo del país.',
     metricas: [
       { valor: '$500M', label: 'Fondo MIPYMES' },
       { valor: '50%', label: 'Producción local' },
@@ -556,24 +569,25 @@ export const ministries = [
     ],
     propuestas: [
       {
-        titulo: 'Fondo MIPYMES',
+        titulo: 'Marco Unificado de Evaluación de Controles Institucionales',
         descripcion:
-          'Creación de un fondo de $500 millones para financiamiento accesible a micro, pequeñas y medianas empresas, con tasas preferenciales y asesoría técnica.',
+          'Diseñar, implementar y evaluar un marco que garantice la mitigación efectiva de riesgos operativos, de continuidad, cumplimiento, seguridad de la información, desempeño ambiental e integridad organizacional, promoviendo la mejora continua.',
       },
       {
-        titulo: 'Tecnificación del Campo',
+        titulo: 'Plan de Continuidad y Omnicanalidad para Atención Ciudadana',
         descripcion:
-          'Programa nacional de tecnificación agrícola: riego, semillas mejoradas, drones, software de gestión y acceso a mercados digitales.',
+          'Clasificar las solicitudes e interacciones según su impacto directo en el ciudadano para priorizar servicios esenciales en periodos de disrupción o crisis.',
       },
       {
-        titulo: 'Comercio Exterior',
+        titulo:
+          'Sistema de Monitoreo Continuo y Gestión de Satisfacción del Ciudadano',
         descripcion:
-          'Apertura de 20 nuevos mercados internacionales para productos dominicanos, con oficinas comerciales estratégicas y diplomacia económica.',
+          'Definir métricas clave de desempeño (velocidad de respuesta, tasa de resolución al primer contacto y amabilidad) para cada trámite prioritario, dando seguimiento oportuno a los indicadores.',
       },
       {
-        titulo: 'Simplificación',
+        titulo: 'Sistema Integrado de Vigilancia y Cumplimiento Normativo',
         descripcion:
-          'Reducción de la carga tributaria para MIPYMES, simplificación de registros y permisos, y plataforma única de trámites empresariales.',
+          'Establecer un protocolo de monitoreo sistemático de boletines oficiales, leyes, decretos, resoluciones ministeriales y normas técnicas (ISO, medioambientales, laborales, seguridad de la información, etc.) aplicables al sector.',
       },
     ],
     equipo: [
@@ -583,10 +597,10 @@ export const ministries = [
       { nombre: 'Director PROINDUSTRIA', cargo: 'Por designar' },
     ],
     metas: [
-      'Duplicar las exportaciones agrícolas',
-      'Crear 200,000 nuevas MIPYMES formales',
-      'Alcanzar el 80% de seguridad alimentaria',
-      'Reducir la pobreza rural en un 50%',
+      'Asegurar la eficacia de los controles institucionales para prevenir la materialización de riesgos que puedan afectar la continuidad operativa, la satisfacción de las partes interesadas, el cumplimiento normativo, la seguridad de la información, el desempeño ambiental y la integridad organizacional, mediante la mejora continua del Sistema Integrado de Gestión.',
+      'Garantizar una atención efectiva al ciudadano cliente durante periodos de disrupción.',
+      'Mejorar el nivel de satisfacción de los ciudadanos-clientes dando un seguimiento y monitoreo oportuno a los indicadores de desempeño.',
+      'Gestionar de manera efectiva mecanismos de identificación, análisis y registro de los requisitos legales y otros requisitos aplicables al alcance del sistema, garantizando el cumplimiento normativo.',
     ],
     icono: 'wheat',
   },
