@@ -82,7 +82,7 @@ export const news = [
     categoria: "Medio Ambiente",
     autor: "Brahian Ceballos Valerio, Ministro designado de Medio Ambiente",
     imagen:
-      "https://images.unsplash.com/photo-1542601905-1c9b4e1db9d7?w=1200&q=80",
+      "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&q=80",
     contenido: [
       "En una jornada cargada de entusiasmo y compromiso ambiental, más de 300 voluntarios del partido Encaminados por el Cambio se dieron cita este sábado en las montañas de Constanza, en la provincia de La Vega, para participar en una histórica jornada de reforestación que concluyó con la siembra de 5,000 plantas endémicas.",
       "La actividad, organizada por la juventud del partido y encabezada por Brahian Ceballos Valerio, Ministro designado de Medio Ambiente, Energía y Minas, se realizó en una zona de 25 hectáreas que había sido afectada por incendios forestales y por la deforestación derivada de la expansión agrícola.",

@@ -23,10 +23,10 @@ const sections = [
   {
     title: "Síguenos",
     links: [
-      { label: "Instagram", to: "/" },
-      { label: "Facebook", to: "/" },
-      { label: "X (Twitter)", to: "/" },
-      { label: "YouTube", to: "/" },
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/epc2028_2032/",
+      },
     ],
   },
 ];
@@ -64,12 +64,23 @@ export default function Footer() {
               <ul className="mt-4 space-y-2">
                 {s.links.map((l) => (
                   <li key={l.label}>
-                    <Link
-                      to={l.to}
-                      className="text-sm text-navy-200 transition-colors hover:text-white"
-                    >
-                      {l.label}
-                    </Link>
+                    {l.href ? (
+                      <a
+                        href={l.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-navy-200 transition-colors hover:text-white"
+                      >
+                        {l.label}
+                      </a>
+                    ) : (
+                      <Link
+                        to={l.to}
+                        className="text-sm text-navy-200 transition-colors hover:text-white"
+                      >
+                        {l.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

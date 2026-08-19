@@ -131,13 +131,16 @@ export default function NewsDetailPage() {
               Ayúdanos a difundir el mensaje del cambio.
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
-              {["Facebook", "Twitter", "WhatsApp", "Instagram"].map((s) => (
-                <button
+              {["Instagram"].map((s) => (
+                <a
                   key={s}
+                  href="https://www.instagram.com/epc2028_2032/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all hover:border-gold-400 hover:bg-gold-500 hover:text-navy-900"
                 >
                   {s}
-                </button>
+                </a>
               ))}
             </div>
           </div>
