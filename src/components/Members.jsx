@@ -80,7 +80,11 @@ export default function Members() {
               <img
                 src={vicepresidenta.imagen}
                 alt={vicepresidenta.nombre}
-                style={vicepresidenta.imagePosition ? { objectPosition: vicepresidenta.imagePosition } : undefined}
+                style={
+                  vicepresidenta.imagePosition
+                    ? { objectPosition: vicepresidenta.imagePosition }
+                    : undefined
+                }
                 className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-900/70 via-navy-900/20 to-transparent" />
@@ -110,7 +114,7 @@ export default function Members() {
               Gabinete Completo
             </p>
             <h3 className="mt-3 font-display text-2xl font-black uppercase leading-tight sm:text-3xl">
-              13 Ministerios al Servicio del Pueblo
+              12 Ministerios al Servicio del Pueblo
             </h3>
             <div className="mt-3 h-1 w-12 rounded-full bg-gold-500" />
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-navy-100 sm:text-base">
@@ -158,7 +162,11 @@ export default function Members() {
                   <img
                     src={m.imagenTitular}
                     alt={m.titular}
-                    style={m.imagePosition ? { objectPosition: m.imagePosition } : undefined}
+                    style={
+                      m.imagePosition
+                        ? { objectPosition: m.imagePosition }
+                        : undefined
+                    }
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-navy-900/30 to-transparent" />
