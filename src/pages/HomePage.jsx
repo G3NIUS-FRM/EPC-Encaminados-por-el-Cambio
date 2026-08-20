@@ -50,6 +50,79 @@ export default function HomePage() {
     <>
       <Hero />
 
+      {/* Encuesta */}
+      <section className="relative isolate overflow-hidden bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700 py-16 text-white sm:py-20">
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 25% 25%, #f5b700 1px, transparent 1px), radial-gradient(circle at 75% 75%, #f5b700 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-900/40 via-transparent to-navy-900/40" />
+
+        <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-10">
+          <div className="text-center">
+            <div className="inline-flex items-center gap-2 rounded-full border border-gold-500/40 bg-gold-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-gold-400">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-gold-400" />
+              Tu voz importa
+            </div>
+            <h2 className="mt-4 font-display text-3xl font-black uppercase leading-tight sm:text-4xl lg:text-5xl">
+              Encuesta Ciudadana EPC
+            </h2>
+            <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-gold-500" />
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-navy-100 sm:text-lg">
+              Ayúdanos a construir el país que merecemos. Comparte tu opinión
+              sobre los temas más importantes para ti y para el futuro de
+              República Dominicana. ¡Solo tomará un minuto!
+            </p>
+          </div>
+
+          <div className="mt-10 overflow-hidden rounded-3xl border-4 border-gold-500/30 bg-white shadow-2xl">
+            <div className="flex items-center justify-between gap-3 bg-navy-900 px-4 py-3 sm:px-6">
+              <div className="flex items-center gap-2">
+                <span className="h-3 w-3 rounded-full bg-red-400" />
+                <span className="h-3 w-3 rounded-full bg-yellow-400" />
+                <span className="h-3 w-3 rounded-full bg-green-400" />
+              </div>
+              <p className="flex-1 text-center text-xs font-semibold uppercase tracking-wider text-gold-400">
+                Encuesta Oficial · EPC 2026
+              </p>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe9yB8sH7t-ga6YfTwIvJ-ldfjwzr0njdoeOIVTTUv6pAl_AA/viewform?usp=publish-editor"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 rounded-full bg-gold-500 px-3 py-1.5 text-[10px] font-black uppercase tracking-wider text-navy-900 transition-all hover:bg-gold-400 hover:shadow-gold-glow sm:text-xs"
+              >
+                <Icon name="external" className="h-3 w-3" strokeWidth={3} />
+                Abrir
+              </a>
+            </div>
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSe9yB8sH7t-ga6YfTwIvJ-ldfjwzr0njdoeOIVTTUv6pAl_AA/viewform?embedded=true"
+              title="Encuesta Ciudadana EPC"
+              className="h-[1600px] w-full sm:h-[1800px]"
+              loading="lazy"
+            >
+              Cargando encuesta…
+            </iframe>
+          </div>
+
+          <div className="mt-8 text-center">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSe9yB8sH7t-ga6YfTwIvJ-ldfjwzr0njdoeOIVTTUv6pAl_AA/viewform?usp=publish-editor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              Responder en pantalla completa
+              <Icon name="external" className="h-4 w-4" strokeWidth={3} />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Intro */}
       <section className="bg-white py-20 sm:py-24">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-10">
