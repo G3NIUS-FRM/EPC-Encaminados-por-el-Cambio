@@ -78,7 +78,7 @@ export default function Hero() {
           style={{ animationDelay: "0.5s" }}
         >
           {[
-            { n: "13", l: "Ministerios" },
+            { n: "12", l: "Ministerios" },
             { n: "7", l: "Planes Estratégicos" },
             { n: "31", l: "Provincias" },
             { n: "2026", l: "El Año del Cambio" },
