@@ -69,6 +69,51 @@ export const ministries = [
       'Modernizar las instituciones de seguridad, incorporando mejores tecnologías, capacitación y sistemas de información.',
       'Garantizar el orden y la seguridad ciudadana, trabajando junto con las comunidades y otras instituciones del Estado.',
     ],
+    prioridades: [
+      { label: 'Prevención comunitaria', value: 30, color: '#1E3A8A' },
+      { label: 'Tecnología y vigilancia', value: 25, color: '#F5B700' },
+      { label: 'Capacitación policial', value: 20, color: '#DC2626' },
+      { label: 'Policía de proximidad', value: 15, color: '#0EA5E9' },
+      { label: 'Reformas institucionales', value: 10, color: '#10B981' },
+    ],
+    barras: {
+      labels: ['Robo', 'Homicidio', 'Violencia intrafamiliar', 'Atraco', 'Tráfico'],
+      series: [
+        {
+          name: '2024',
+          color: '#94A3B8',
+          values: [80, 65, 70, 60, 75],
+        },
+        {
+          name: 'Meta 2028',
+          color: '#1E3A8A',
+          values: [30, 20, 35, 25, 30],
+        },
+      ],
+      yUnit: '%',
+      title: 'Reducción Esperada de Incidencia Delictiva',
+      subtitle:
+        'Índice comparativo de criminalidad actual frente a la meta propuesta para 2028.',
+    },
+    lineas: {
+      labels: ['2024', '2025', '2026', '2027', '2028'],
+      series: [
+        {
+          name: 'Cámaras inteligentes (centros)',
+          color: '#F5B700',
+          values: [50, 120, 250, 400, 500],
+        },
+        {
+          name: 'Agentes nuevos (miles)',
+          color: '#1E3A8A',
+          values: [1, 4, 8, 12, 15],
+        },
+      ],
+      yUnit: '',
+      title: 'Fortalecimiento Institucional 2024–2028',
+      subtitle:
+        'Crecimiento proyectado de tecnología de vigilancia y nuevo personal policial.',
+    },
     icono: 'shield',
   },
   {
@@ -129,6 +174,51 @@ export const ministries = [
       'Administración sostenible de áreas protegidas: robustecer la vigilancia y conservación de los ecosistemas y espacios protegidos.',
       'Desarrollo sostenible comunitario: asegurar que las acciones de preservación ambiental contribuyan directamente a la estabilidad socioeconómica de las comunidades.',
     ],
+    prioridades: [
+      { label: 'Energías renovables', value: 30, color: '#10B981' },
+      { label: 'Reforestación de cuencas', value: 25, color: '#22C55E' },
+      { label: 'Protección de áreas', value: 20, color: '#84CC16' },
+      { label: 'Gestión del agua', value: 15, color: '#0EA5E9' },
+      { label: 'Educación ambiental', value: 10, color: '#F5B700' },
+    ],
+    barras: {
+      labels: ['Solar', 'Eólica', 'Hidráulica', 'Biomasa', 'Geotérmica'],
+      series: [
+        {
+          name: 'Capacidad actual (MW)',
+          color: '#94A3B8',
+          values: [260, 380, 620, 90, 0],
+        },
+        {
+          name: 'Meta 2030 (MW)',
+          color: '#10B981',
+          values: [900, 1200, 850, 350, 150],
+        },
+      ],
+      yUnit: ' MW',
+      title: 'Matriz Energética Renovable',
+      subtitle:
+        'Comparación de la capacidad instalada hoy frente a la meta de generación limpia.',
+    },
+    lineas: {
+      labels: ['2024', '2026', '2028', '2030', '2032', '2035'],
+      series: [
+        {
+          name: 'Cobertura forestal (%)',
+          color: '#10B981',
+          values: [40, 45, 52, 58, 63, 70],
+        },
+        {
+          name: 'Cuencas protegidas',
+          color: '#0EA5E9',
+          values: [12, 18, 22, 26, 28, 30],
+        },
+      ],
+      yUnit: '',
+      title: 'Recuperación Ambiental Proyectada 2024–2035',
+      subtitle:
+        'Evolución esperada de la cobertura forestal y las cuencas hidrográficas protegidas.',
+    },
     icono: 'leaf',
   },
   {
@@ -141,6 +231,8 @@ export const ministries = [
     cargo: 'Ministro',
     descripcion:
       'Trabajaremos por un sistema de salud universal y de calidad, junto a una infraestructura vial moderna que conecte a todas las comunidades y reduzca las desigualdades territoriales.',
+    vision:
+      'Ser una institución pública de excelencia e innovación, integrada e interconectada, que lidere la transformación de la infraestructura física y los servicios sanitarios del país, garantizando un entorno seguro, accesible y sostenible que promueva el bienestar integral, la equidad social y el desarrollo humano de todos los ciudadanos.',
     descripcionCompleta:
       'El Ministerio de Salud Pública y Obras Públicas, bajo el liderazgo de Adrian Ramirez, tiene la misión dual de garantizar el derecho a la salud de todos los dominicanos y de construir la infraestructura que el país necesita para su desarrollo.\n\nEn materia de salud, enfrentamos una fragmentación del sistema, hospitales deteriorados y una alta prevalencia de enfermedades prevenibles. Nuestra propuesta es avanzar hacia un sistema único, universal y de calidad, donde cada ciudadano reciba atención sin importar su capacidad de pago.\n\nEn obras públicas, el reto es cerrar la brecha de infraestructura entre las grandes ciudades y las zonas rurales, así como modernizar la red vial, los puertos y los aeropuertos. La conectividad es esencial para el desarrollo económico y la equidad territorial.',
     imagen:
@@ -153,6 +245,51 @@ export const ministries = [
       { valor: '100%', label: 'Cobertura médica' },
       { valor: '15min', label: 'Atención primaria' },
     ],
+    prioridades: [
+      { label: 'Sistema Único de Salud', value: 30, color: '#14B8A6' },
+      { label: 'Red Hospitalaria Moderna', value: 25, color: '#0EA5E9' },
+      { label: 'Atención Primaria', value: 20, color: '#6366F1' },
+      { label: 'Infraestructura Vial', value: 15, color: '#F59E0B' },
+      { label: 'Saneamiento y Agua Potable', value: 10, color: '#10B981' },
+    ],
+    barras: {
+      labels: ['Salud', 'Educación', 'Seguridad', 'Infraestructura', 'Ambiente'],
+      series: [
+        {
+          name: 'Hoy',
+          color: '#94A3B8',
+          values: [55, 70, 60, 40, 50],
+        },
+        {
+          name: 'Meta 2028',
+          color: '#0A1A3D',
+          values: [95, 90, 85, 90, 80],
+        },
+      ],
+      yUnit: '%',
+      title: 'Cobertura de Servicios Públicos Esenciales',
+      subtitle:
+        'Comparación del estado actual frente a la meta propuesta para 2028.',
+    },
+    lineas: {
+      labels: ['2024', '2025', '2026', '2027', '2028', '2029', '2030'],
+      series: [
+        {
+          name: 'Hospitales construidos',
+          color: '#0EA5E9',
+          values: [3, 6, 12, 22, 35, 45, 50],
+        },
+        {
+          name: 'Km de carreteras pavimentadas (cientos)',
+          color: '#F59E0B',
+          values: [1, 3, 7, 12, 18, 25, 30],
+        },
+      ],
+      yUnit: '',
+      title: 'Proyección de Inversión en Infraestructura 2024–2030',
+      subtitle:
+        'Evolución esperada de los proyectos de salud y obras públicas del ministerio.',
+    },
     propuestas: [
       {
         titulo: 'Sistema Único de Salud',
@@ -251,6 +388,51 @@ export const ministries = [
       'Crear mecanismos de coordinación regional en materia de seguridad, mediante la cooperación entre las fuerzas de seguridad y defensa de los países participantes para combatir el narcotráfico, el crimen organizado, el terrorismo y otras amenazas transnacionales, respetando la soberanía y las leyes de cada Estado.',
       'Renegociar, revisar o solicitar la modificación de acuerdos y contratos internacionales con entidades y empresas que hayan incumplido sus compromisos o que estén provocando daños ambientales o perjuicios económicos al país.',
     ],
+    prioridades: [
+      { label: 'Soberanía y defensa', value: 30, color: '#1E3A8A' },
+      { label: 'Diplomacia regional', value: 25, color: '#0EA5E9' },
+      { label: 'Atención a la diáspora', value: 20, color: '#F5B700' },
+      { label: 'Cooperación internacional', value: 15, color: '#10B981' },
+      { label: 'Ciberseguridad', value: 10, color: '#6366F1' },
+    ],
+    barras: {
+      labels: ['Caribe', 'Norteamérica', 'Europa', 'Latinoamérica', 'Asia'],
+      series: [
+        {
+          name: 'Acuerdos activos',
+          color: '#94A3B8',
+          values: [22, 35, 28, 30, 14],
+        },
+        {
+          name: 'Meta 2030',
+          color: '#1E3A8A',
+          values: [35, 50, 45, 55, 30],
+        },
+      ],
+      yUnit: '',
+      title: 'Relaciones Bilaterales y Multilaterales',
+      subtitle:
+        'Número de acuerdos vigentes por región frente al objetivo estratégico 2030.',
+    },
+    lineas: {
+      labels: ['2024', '2026', '2028', '2030'],
+      series: [
+        {
+          name: 'Bases navales modernizadas',
+          color: '#0EA5E9',
+          values: [1, 3, 4, 5],
+        },
+        {
+          name: 'Consulados digitales',
+          color: '#F5B700',
+          values: [5, 15, 28, 40],
+        },
+      ],
+      yUnit: '',
+      title: 'Modernización de Infraestructura Diplomática',
+      subtitle:
+        'Proyección de la presencia física y digital de República Dominicana en el exterior.',
+    },
     icono: 'globe',
   },
   {
@@ -310,6 +492,51 @@ export const ministries = [
       'Aumentar el acceso a la educación superior y las oportunidades de becas.',
       'Formar estudiantes preparados para el mercado laboral, con énfasis en tecnología, innovación y emprendimiento.',
     ],
+    prioridades: [
+      { label: 'Calidad educativa', value: 30, color: '#7C3AED' },
+      { label: 'Infraestructura escolar', value: 25, color: '#6366F1' },
+      { label: 'Formación docente', value: 20, color: '#0EA5E9' },
+      { label: 'Educación superior', value: 15, color: '#F5B700' },
+      { label: 'Conectividad y tecnología', value: 10, color: '#10B981' },
+    ],
+    barras: {
+      labels: ['Básica', 'Media', 'Técnica', 'Superior', 'Postgrado'],
+      series: [
+        {
+          name: 'Cobertura actual (%)',
+          color: '#94A3B8',
+          values: [92, 75, 30, 45, 8],
+        },
+        {
+          name: 'Meta 2028 (%)',
+          color: '#7C3AED',
+          values: [98, 92, 60, 75, 20],
+        },
+      ],
+      yUnit: '%',
+      title: 'Cobertura Educativa por Nivel',
+      subtitle:
+        'Comparación de matrícula actual frente a la cobertura meta del Plan 2028.',
+    },
+    lineas: {
+      labels: ['2024', '2025', '2026', '2027', '2028'],
+      series: [
+        {
+          name: 'Becas otorgadas (miles)',
+          color: '#F5B700',
+          values: [8, 18, 28, 40, 50],
+        },
+        {
+          name: 'Escuelas con conectividad (%)',
+          color: '#7C3AED',
+          values: [55, 70, 82, 92, 100],
+        },
+      ],
+      yUnit: '',
+      title: 'Inversión Social en Educación 2024–2028',
+      subtitle:
+        'Evolución esperada de becas y conectividad escolar a nivel nacional.',
+    },
     icono: 'graduationCap',
   },
   {
@@ -374,6 +601,51 @@ export const ministries = [
       'La mitad de las nuevas plazas públicas cubiertas por mérito, no por recomendación.',
       '30% de las instituciones públicas con jornadas más flexibles, sin sacrificar el servicio al ciudadano.',
     ],
+    prioridades: [
+      { label: 'Pasaporte laboral digital', value: 30, color: '#F59E0B' },
+      { label: 'Protección en plataformas', value: 25, color: '#D97706' },
+      { label: 'Meritocracia pública', value: 20, color: '#7C3AED' },
+      { label: 'Digitalización del Estado', value: 15, color: '#0EA5E9' },
+      { label: 'Capacitación laboral', value: 10, color: '#10B981' },
+    ],
+    barras: {
+      labels: ['Formal', 'Informal', 'Plataformas', 'Público', 'Autónomo'],
+      series: [
+        {
+          name: 'Hoy (%)',
+          color: '#94A3B8',
+          values: [45, 35, 5, 20, 15],
+        },
+        {
+          name: 'Meta 2030 (%)',
+          color: '#F59E0B',
+          values: [70, 15, 12, 28, 25],
+        },
+      ],
+      yUnit: '%',
+      title: 'Composición del Mercado Laboral Dominicano',
+      subtitle:
+        'Distribución actual del empleo frente a la meta de formalización al 2030.',
+    },
+    lineas: {
+      labels: ['2024', '2025', '2026', '2027', '2028'],
+      series: [
+        {
+          name: 'Trámites digitales (%)',
+          color: '#0EA5E9',
+          values: [30, 55, 75, 90, 100],
+        },
+        {
+          name: 'Trabajadores en pasaporte (miles)',
+          color: '#F59E0B',
+          values: [50, 200, 450, 750, 1000],
+        },
+      ],
+      yUnit: '',
+      title: 'Transformación Digital del Trabajo 2024–2028',
+      subtitle:
+        'Avance progresivo de la digitalización estatal y del Pasaporte Laboral Digital.',
+    },
     icono: 'briefcase',
   },
   {
@@ -432,6 +704,51 @@ export const ministries = [
       'Empoderamiento económico y social de la mujer joven: vincular los programas deportivos con iniciativas de capacitación y empleo juvenil. La meta es que, en un plazo de 3 años, al menos un porcentaje de las participantes accedan a oportunidades de formación laboral o emprendimiento.',
       'Consolidación de una política de Estado para el deporte: lograr que el calendario deportivo oficial y los programas bandera del ministerio sean asumidos por el país como una política de Estado, garantizando su continuidad y presupuesto más allá de los cambios de gestión.',
     ],
+    prioridades: [
+      { label: 'Juegos de la Mujer', value: 30, color: '#DC2626' },
+      { label: 'Ruta del Deporte', value: 25, color: '#F5B700' },
+      { label: 'Liderazgo femenino', value: 20, color: '#EC4899' },
+      { label: 'Calendario sostenible', value: 15, color: '#1E3A8A' },
+      { label: 'Juegos de Inclusión', value: 10, color: '#10B981' },
+    ],
+    barras: {
+      labels: ['Fútbol', 'Baloncesto', 'Atletismo', 'Voleibol', 'Discapacidad'],
+      series: [
+        {
+          name: 'Hoy (participantes)',
+          color: '#94A3B8',
+          values: [12000, 8000, 4500, 6000, 1200],
+        },
+        {
+          name: 'Meta 2028',
+          color: '#DC2626',
+          values: [25000, 18000, 12000, 14000, 6000],
+        },
+      ],
+      yUnit: '',
+      title: 'Participación Femenina por Disciplina',
+      subtitle:
+        'Número actual de mujeres deportistas frente a la meta del Plan 2028.',
+    },
+    lineas: {
+      labels: ['2024', '2025', '2026', '2027', '2028'],
+      series: [
+        {
+          name: 'Comunidades atendidas',
+          color: '#F5B700',
+          values: [20, 60, 120, 180, 250],
+        },
+        {
+          name: 'Becas deportivas activas',
+          color: '#DC2626',
+          values: [300, 800, 1500, 2200, 3000],
+        },
+      ],
+      yUnit: '',
+      title: 'Impacto Social de los Programas Deportivos',
+      subtitle:
+        'Alcance territorial y formativo esperado del ministerio a 2028.',
+    },
     icono: 'trophy',
   },
   {
@@ -492,6 +809,51 @@ export const ministries = [
       'Generar más oportunidades: incrementar la participación de comunidades y emprendedores locales en la actividad turística.',
       'Posicionar a República Dominicana: consolidar al país como uno de los principales destinos turísticos y culturales del Caribe.',
     ],
+    prioridades: [
+      { label: 'Turismo cultural', value: 30, color: '#0EA5E9' },
+      { label: 'Turismo sostenible', value: 25, color: '#10B981' },
+      { label: 'Nuevos destinos', value: 20, color: '#F59E0B' },
+      { label: 'Apoyo a comunidades', value: 15, color: '#F5B700' },
+      { label: 'Patrimonio cultural', value: 10, color: '#7C3AED' },
+    ],
+    barras: {
+      labels: ['Sol y playa', 'Cultural', 'Ecológico', 'Aventura', 'Bienestar'],
+      series: [
+        {
+          name: 'Visitantes actuales (miles)',
+          color: '#94A3B8',
+          values: [6800, 800, 450, 320, 250],
+        },
+        {
+          name: 'Meta 2030 (miles)',
+          color: '#0EA5E9',
+          values: [7500, 2200, 1400, 1100, 900],
+        },
+      ],
+      yUnit: 'K',
+      title: 'Diversificación de la Oferta Turística',
+      subtitle:
+        'Comparación de visitantes por tipo de turismo frente al Plan 2030.',
+    },
+    lineas: {
+      labels: ['2024', '2025', '2026', '2027', '2028', '2029', '2030'],
+      series: [
+        {
+          name: 'Turistas anuales (millones)',
+          color: '#0EA5E9',
+          values: [8.5, 9.0, 9.5, 9.8, 10.0, 10.0, 10.0],
+        },
+        {
+          name: 'Ingresos (mil millones US$)',
+          color: '#F5B700',
+          values: [7, 7.5, 8.0, 8.3, 8.5, 8.7, 9.0],
+        },
+      ],
+      yUnit: '',
+      title: 'Crecimiento del Sector Turístico 2024–2030',
+      subtitle:
+        'Proyección de visitantes y divisas generadas por el turismo dominicano.',
+    },
     icono: 'palmtree',
   },
   {
@@ -550,6 +912,51 @@ export const ministries = [
       'Reducir en un 20% los tiempos de respuesta e itinerario de las solicitudes dirigidas a la Presidencia.',
       'Capacitar al 90% del equipo administrativo en estándares modernos de función pública durante este año.',
     ],
+    prioridades: [
+      { label: 'Digitalización operativa', value: 30, color: '#1E3A8A' },
+      { label: 'Transparencia y rendición', value: 25, color: '#0EA5E9' },
+      { label: 'Capacitación del personal', value: 20, color: '#F5B700' },
+      { label: 'Optimización logística', value: 15, color: '#10B981' },
+      { label: 'Ética pública', value: 10, color: '#7C3AED' },
+    ],
+    barras: {
+      labels: ['Presidencia', 'Ministerios', 'Direcciones', 'Congreso', 'Otros'],
+      series: [
+        {
+          name: 'Trámites digitales hoy (%)',
+          color: '#94A3B8',
+          values: [40, 35, 25, 20, 30],
+        },
+        {
+          name: 'Meta 2028 (%)',
+          color: '#1E3A8A',
+          values: [100, 95, 90, 90, 95],
+        },
+      ],
+      yUnit: '%',
+      title: 'Avance de la Transformación Digital del Estado',
+      subtitle:
+        'Porcentaje de trámites digitales en cada dependencia frente a la meta 2028.',
+    },
+    lineas: {
+      labels: ['2024', '2025', '2026', '2027', '2028'],
+      series: [
+        {
+          name: 'Tiempos de respuesta (días)',
+          color: '#DC2626',
+          values: [12, 10, 8, 7, 6],
+        },
+        {
+          name: 'Personal capacitado (%)',
+          color: '#10B981',
+          values: [30, 55, 75, 85, 95],
+        },
+      ],
+      yUnit: '',
+      title: 'Eficiencia y Profesionalización del Servicio Público',
+      subtitle:
+        'Indicadores de gestión previstos durante el período de transición administrativa.',
+    },
     icono: 'building',
   },
   {
@@ -610,6 +1017,51 @@ export const ministries = [
       'Mejorar el nivel de satisfacción de los ciudadanos-clientes dando un seguimiento y monitoreo oportuno a los indicadores de desempeño.',
       'Gestionar de manera efectiva mecanismos de identificación, análisis y registro de los requisitos legales y otros requisitos aplicables al alcance del sistema, garantizando el cumplimiento normativo.',
     ],
+    prioridades: [
+      { label: 'Seguridad alimentaria', value: 30, color: '#10B981' },
+      { label: 'Apoyo al productor', value: 25, color: '#84CC16' },
+      { label: 'MIPYMES y financiamiento', value: 20, color: '#F59E0B' },
+      { label: 'Nuevos mercados', value: 15, color: '#0EA5E9' },
+      { label: 'Industria nacional', value: 10, color: '#7C3AED' },
+    ],
+    barras: {
+      labels: ['Arroz', 'Café', 'Cacao', 'Banano', 'Hortalizas'],
+      series: [
+        {
+          name: 'Producción actual (%)',
+          color: '#94A3B8',
+          values: [60, 35, 50, 70, 65],
+        },
+        {
+          name: 'Meta 2028 (%)',
+          color: '#10B981',
+          values: [85, 65, 80, 90, 85],
+        },
+      ],
+      yUnit: '%',
+      title: 'Producción Nacional por Rubro Agrícola',
+      subtitle:
+        'Porcentaje de la demanda interna cubierta hoy frente a la meta 2028.',
+    },
+    lineas: {
+      labels: ['2024', '2025', '2026', '2027', '2028'],
+      series: [
+        {
+          name: 'Crédito MIPYMES (millones US$)',
+          color: '#F59E0B',
+          values: [120, 220, 320, 420, 500],
+        },
+        {
+          name: 'Emprendedores apoyados (miles)',
+          color: '#10B981',
+          values: [40, 90, 140, 180, 200],
+        },
+      ],
+      yUnit: '',
+      title: 'Crecimiento Productivo 2024–2028',
+      subtitle:
+        'Evolución esperada del crédito y acompañamiento al sector MIPYME y agrícola.',
+    },
     icono: 'wheat',
   },
   {
@@ -668,6 +1120,51 @@ export const ministries = [
       'Digitalizar el 100% de los procesos judiciales',
       'Procesar todos los casos de corrupción de alto perfil',
     ],
+    prioridades: [
+      { label: 'Modernización judicial', value: 30, color: '#7C2D12' },
+      { label: 'Independencia judicial', value: 25, color: '#B91C1C' },
+      { label: 'Acceso a la justicia', value: 20, color: '#F59E0B' },
+      { label: 'Lucha anticorrupción', value: 15, color: '#1E3A8A' },
+      { label: 'Derechos humanos', value: 10, color: '#0EA5E9' },
+    ],
+    barras: {
+      labels: ['Civil', 'Penal', 'Laboral', 'Familia', 'Comercial'],
+      series: [
+        {
+          name: 'Casos en mora (%)',
+          color: '#DC2626',
+          values: [65, 50, 40, 35, 55],
+        },
+        {
+          name: 'Meta 2028 (%)',
+          color: '#1E3A8A',
+          values: [20, 15, 10, 10, 18],
+        },
+      ],
+      yUnit: '%',
+      title: 'Mora Judicial por Materia',
+      subtitle:
+        'Porcentaje de casos atrasados hoy frente a la meta de descongestión 2028.',
+    },
+    lineas: {
+      labels: ['2024', '2025', '2026', '2027', '2028'],
+      series: [
+        {
+          name: 'Procesos digitales (%)',
+          color: '#0EA5E9',
+          values: [20, 45, 70, 88, 100],
+        },
+        {
+          name: 'Casos anticorrupción procesados',
+          color: '#B91C1C',
+          values: [15, 35, 60, 85, 120],
+        },
+      ],
+      yUnit: '',
+      title: 'Indicadores de Justicia 2024–2028',
+      subtitle:
+        'Evolución de la transformación digital y la lucha contra la corrupción.',
+    },
     icono: 'scale',
   },
   {
@@ -733,5 +1230,43 @@ export const ministries = [
       { label: 'Finanzas públicas', value: 15, color: '#B39DDB' },
       { label: 'Transparencia y control', value: 10, color: '#F48FB1' },
     ],
+    barras: {
+      labels: ['Educación', 'Salud', 'Seguridad', 'Infraestructura', 'MIPYMES'],
+      series: [
+        {
+          name: 'Presupuesto actual (% del PIB)',
+          color: '#94A3B8',
+          values: [3.5, 2.8, 1.8, 2.0, 0.4],
+        },
+        {
+          name: 'Meta 2028 (% del PIB)',
+          color: '#4CAF79',
+          values: [5.0, 4.5, 2.5, 4.0, 1.5],
+        },
+      ],
+      yUnit: '%',
+      title: 'Asignación Presupuestaria por Sector',
+      subtitle:
+        'Participación del gasto público hoy frente a la meta EPC 2028.',
+    },
+    lineas: {
+      labels: ['2024', '2025', '2026', '2027', '2028', '2029', '2030'],
+      series: [
+        {
+          name: 'Crecimiento del PIB (%)',
+          color: '#4CAF79',
+          values: [4.0, 4.5, 5.0, 5.5, 6.0, 5.8, 5.5],
+        },
+        {
+          name: 'Empleo formal creado (miles)',
+          color: '#FF7043',
+          values: [25, 60, 110, 170, 240, 290, 350],
+        },
+      ],
+      yUnit: '',
+      title: 'Proyección Macroeconómica 2024–2030',
+      subtitle:
+        'Crecimiento económico y creación de empleo formal proyectado por el ministerio.',
+    },
   },
 ];

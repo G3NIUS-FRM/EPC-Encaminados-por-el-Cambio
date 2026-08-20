@@ -6,10 +6,26 @@ import PageHeader from "../components/PageHeader";
 import Logo from "../components/Logo";
 import Icon from "../components/Icon";
 import DonutChart from "../components/DonutChart";
+import BarChart from "../components/BarChart";
+import LineChart from "../components/LineChart";
+import HorizontalBarChart from "../components/HorizontalBarChart";
+
+// Alternating chart pairs (indices into the chart types: donut, barras, lineas, ranking)
+const CHART_ROTATION = [
+  ["donut", "barras"],
+  ["lineas", "ranking"],
+  ["donut", "lineas"],
+  ["barras", "ranking"],
+  ["donut", "ranking"],
+  ["barras", "lineas"],
+];
 
 export default function MinistryDetailPage() {
   const { slug } = useParams();
   const ministry = ministries.find((m) => m.slug === slug);
+  const ministryIndex = ministries.findIndex((m) => m.slug === slug);
+  const chartPair =
+    CHART_ROTATION[ministryIndex % CHART_ROTATION.length] ?? CHART_ROTATION[0];
 
   if (!ministry) {
     return (
@@ -103,20 +119,9 @@ export default function MinistryDetailPage() {
                 {ministry.cargo}
               </p>
             </div>
-            <div className="mt-6 flex items-center gap-3 rounded-xl bg-navy-800/50 p-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold-500 text-navy-900">
-                <Icon name={ministry.icono} className="h-5 w-5" strokeWidth={2.5} />
-              </div>
-              <div>
-                <p className="text-xs uppercase tracking-wider text-navy-200">
-                  Área
-                </p>
-                <p className="text-sm font-bold">{ministry.nombre.split("Ministerio de ")[1]?.split(" y")[0]}</p>
-              </div>
-            </div>
             <a
               href="#"
-              className="mt-5 block rounded-full bg-gold-500 px-4 py-3 text-center text-sm font-bold text-navy-900 transition-all hover:bg-gold-400 hover:shadow-gold-glow"
+              className="mt-6 block rounded-full bg-gold-500 px-4 py-3 text-center text-sm font-bold text-navy-900 transition-all hover:bg-gold-400 hover:shadow-gold-glow"
             >
               Ver propuestas del ministerio
             </a>
@@ -181,17 +186,81 @@ export default function MinistryDetailPage() {
         </div>
       </section>
 
-      {/* Prioridades (donut) — sólo si la cartera define prioridades */}
-      {ministry.prioridades && (
+      {/* Gráficos del ministerio — alterna 2 por cartera */}
+      {(ministry.prioridades || ministry.barras || ministry.lineas) && (
         <section className="bg-white py-16 sm:py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-            <DonutChart
-              data={ministry.prioridades}
-              title={`Prioridades del ${ministry.nombre}`}
-              subtitle="Distribución propuesta de las prioridades de gestión del Gobierno EPC 2026."
-              size={320}
-              thickness={56}
-            />
+            <div className="text-center">
+              <p className="text-sm font-bold uppercase tracking-[0.3em] text-gold-600">
+                Indicadores & Gráficos
+              </p>
+              <h2 className="mt-3 font-display text-3xl font-black uppercase leading-tight text-navy-900 sm:text-4xl">
+                Datos del Ministerio
+              </h2>
+              <div className="gold-divider mt-4" />
+              <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-navy-700">
+                Visualización de las prioridades, comparativas sectoriales y la
+                proyección de impacto del {ministry.nombre} durante el período
+                2026–2030.
+              </p>
+            </div>
+
+            {/* Donut: Prioridades */}
+            {chartPair.includes("donut") && ministry.prioridades && (
+              <div className="mt-12 rounded-3xl border border-navy-100 bg-navy-50/40 p-6 shadow-sm sm:p-10">
+                <DonutChart
+                  data={ministry.prioridades}
+                  title={`Prioridades del ${ministry.nombre}`}
+                  subtitle="Distribución propuesta de las prioridades de gestión del Gobierno EPC 2026."
+                  size={320}
+                  thickness={56}
+                />
+              </div>
+            )}
+
+            {/* Barras: comparativa */}
+            {chartPair.includes("barras") && ministry.barras && (
+              <div className="mt-12 rounded-3xl border border-navy-100 bg-white p-6 shadow-sm sm:p-10">
+                <BarChart
+                  data={ministry.barras.labels.map((label, i) => ({
+                    label,
+                    values: ministry.barras.series.map((s) => s.values[i]),
+                    colors: ministry.barras.series.map((s) => s.color),
+                  }))}
+                  seriesLabels={ministry.barras.series.map((s) => s.name)}
+                  yUnit={ministry.barras.yUnit}
+                  title={ministry.barras.title}
+                  subtitle={ministry.barras.subtitle}
+                />
+              </div>
+            )}
+
+            {/* Líneas: proyección */}
+            {chartPair.includes("lineas") && ministry.lineas && (
+              <div className="mt-12 rounded-3xl border border-navy-100 bg-gradient-to-br from-navy-50 to-white p-6 shadow-sm sm:p-10">
+                <LineChart
+                  labels={ministry.lineas.labels}
+                  series={ministry.lineas.series}
+                  yUnit={ministry.lineas.yUnit}
+                  title={ministry.lineas.title}
+                  subtitle={ministry.lineas.subtitle}
+                />
+              </div>
+            )}
+
+            {/* Ranking: top prioridades como barras horizontales */}
+            {chartPair.includes("ranking") && ministry.prioridades && (
+              <div className="mt-12 rounded-3xl border border-navy-100 bg-white p-6 shadow-sm sm:p-10">
+                <HorizontalBarChart
+                  data={[...ministry.prioridades].sort(
+                    (a, b) => b.value - a.value
+                  )}
+                  title="Ranking de Prioridades"
+                  subtitle="Ordenadas de mayor a menor importancia estratégica."
+                  unit="%"
+                />
+              </div>
+            )}
           </div>
         </section>
       )}
